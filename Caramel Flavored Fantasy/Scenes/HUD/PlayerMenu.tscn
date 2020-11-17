@@ -1,0 +1,258 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/HUD/HUD.gd" type="Script" id=1]
+[ext_resource path="res://Other/Fonts/m5x7.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Other/Fonts/m3x6.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Graphics/HUD/menu-cursor.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/UI/HeroView.gd" type="Script" id=6]
+[ext_resource path="res://Graphics/Portraits/portraits.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[node name="PlayerMenu" type="CanvasLayer" groups=[
+"HUD",
+]]
+script = ExtResource( 1 )
+
+[node name="HeroView" type="Panel" parent="."]
+self_modulate = Color( 0.556863, 0.34902, 0.145098, 1 )
+margin_left = -14.0
+margin_top = -13.0
+margin_right = 402.0
+margin_bottom = 229.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeroOptions" type="Panel" parent="HeroView"]
+margin_left = 302.0
+margin_top = 43.0
+margin_right = 394.0
+margin_bottom = 145.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemsLbl" type="Label" parent="HeroView/HeroOptions"]
+margin_left = 1.0
+margin_top = -2.0
+margin_right = 41.0
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 1 )
+text = "Items"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EquipLbl" type="Label" parent="HeroView/HeroOptions"]
+margin_left = 1.0
+margin_top = 10.0
+margin_right = 41.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 1 )
+text = "Equip"
+
+[node name="MagicLbl" type="Label" parent="HeroView/HeroOptions"]
+margin_left = 1.0
+margin_top = 25.0
+margin_right = 41.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 1 )
+text = "Magic"
+
+[node name="StatusLbl" type="Label" parent="HeroView/HeroOptions"]
+margin_left = 1.0
+margin_top = 39.0
+margin_right = 49.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 1 )
+text = "Status
+"
+
+[node name="OptionsLbl" type="Label" parent="HeroView/HeroOptions"]
+margin_left = 1.0
+margin_top = 52.0
+margin_right = 57.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 1 )
+text = "Options
+"
+
+[node name="SaveLbl" type="Label" parent="HeroView/HeroOptions"]
+margin_left = 1.0
+margin_top = 65.0
+margin_right = 49.0
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 1 )
+text = "Save
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitLbl" type="Label" parent="HeroView/HeroOptions"]
+margin_left = 1.0
+margin_top = 78.0
+margin_right = 49.0
+margin_bottom = 97.0
+custom_fonts/font = SubResource( 1 )
+text = "Quit
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cursor" type="Sprite" parent="HeroView/HeroOptions"]
+position = Vector2( -8, 4 )
+texture = ExtResource( 5 )
+
+[node name="WorldInfo" type="Panel" parent="HeroView"]
+margin_left = 303.0
+margin_top = 155.0
+margin_right = 394.0
+margin_bottom = 225.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RegionLbl" type="Label" parent="HeroView/WorldInfo"]
+margin_left = 1.0
+margin_top = -2.0
+margin_right = 41.0
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 1 )
+text = "Gaz"
+
+[node name="GoldLbl" type="Label" parent="HeroView/WorldInfo"]
+margin_left = 1.0
+margin_top = 11.0
+margin_right = 41.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 1 )
+text = "GP: 0"
+
+[node name="TimeLbl" type="Label" parent="HeroView/WorldInfo"]
+margin_left = 1.0
+margin_top = 25.0
+margin_right = 41.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 1 )
+text = "00:01:54"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeroPanel" type="Panel" parent="HeroView"]
+margin_left = 45.0
+margin_top = 46.0
+margin_right = 270.0
+margin_bottom = 92.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="HeroView/HeroPanel"]
+position = Vector2( 1, 7 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 48, 48 )
+
+[node name="NameLbl" type="Label" parent="HeroView/HeroPanel"]
+margin_left = 34.0
+margin_right = 74.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "Sid"
+
+[node name="HPLbl" type="Label" parent="HeroView/HeroPanel"]
+margin_left = 84.0
+margin_right = 131.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "HP: 17/17"
+
+[node name="MPLbl" type="Label" parent="HeroView/HeroPanel"]
+margin_left = 84.0
+margin_top = 14.0
+margin_right = 131.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 2 )
+text = "MP: 0/0"
+
+[node name="StatusLbl" type="Label" parent="HeroView/HeroPanel"]
+margin_left = 141.0
+margin_right = 194.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "Status: OK"
+
+[node name="LevelLbl" type="Label" parent="HeroView/HeroPanel"]
+margin_left = 34.0
+margin_top = 14.0
+margin_right = 74.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 2 )
+text = "Lv: 1"
+
+[node name="HeroPanel2" type="Panel" parent="HeroView"]
+margin_left = 45.0
+margin_top = 124.0
+margin_right = 270.0
+margin_bottom = 170.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="HeroView/HeroPanel2"]
+position = Vector2( 1, 7 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 96, 96, 48, 48 )
+
+[node name="NameLbl" type="Label" parent="HeroView/HeroPanel2"]
+margin_left = 34.0
+margin_right = 77.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "Rose"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HPLbl" type="Label" parent="HeroView/HeroPanel2"]
+margin_left = 84.0
+margin_right = 131.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "HP: 12/12"
+
+[node name="MPLbl" type="Label" parent="HeroView/HeroPanel2"]
+margin_left = 84.0
+margin_top = 14.0
+margin_right = 131.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 2 )
+text = "MP: 5/5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatusLbl" type="Label" parent="HeroView/HeroPanel2"]
+margin_left = 141.0
+margin_right = 194.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "Status: OK"
+
+[node name="LevelLbl" type="Label" parent="HeroView/HeroPanel2"]
+margin_left = 34.0
+margin_top = 14.0
+margin_right = 74.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 2 )
+text = "Lv: 1"

@@ -1,0 +1,1997 @@
+[gd_resource type="TileSet" load_steps=8 format=2]
+
+[ext_resource path="res://Graphics/Tilesets/tileset_basic.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 8, 8 )
+
+[resource]
+0/name = "grass_1"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 192, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 8, 8 )
+0/navigation_offset = Vector2( 8, 8 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "grass_path"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 288, 416, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 8, 8 )
+1/navigation_offset = Vector2( 8, 8 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "grass_path2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 208, 464, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 8, 8 )
+2/navigation_offset = Vector2( 8, 8 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "grass_path3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 288, 464, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 8, 8 )
+3/navigation_offset = Vector2( 8, 8 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "grass_path4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 304, 464, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 8, 8 )
+4/navigation_offset = Vector2( 8, 8 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "grass_path5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 304, 448, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 8, 8 )
+5/navigation_offset = Vector2( 8, 8 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "grass_path6"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 272, 432, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 8, 8 )
+6/navigation_offset = Vector2( 8, 8 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "grass_path7"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 256, 416, 16, 16 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 8, 8 )
+7/navigation_offset = Vector2( 8, 8 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "grass_path8"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 304, 432, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 8, 8 )
+8/navigation_offset = Vector2( 8, 8 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "grass_path9"
+9/texture = ExtResource( 1 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 256, 464, 16, 16 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 8, 8 )
+9/navigation_offset = Vector2( 8, 8 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "grass_path10"
+10/texture = ExtResource( 1 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 240, 464, 16, 16 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 8, 8 )
+10/navigation_offset = Vector2( 8, 8 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "grass_path11"
+11/texture = ExtResource( 1 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 304, 416, 16, 16 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 8, 8 )
+11/navigation_offset = Vector2( 8, 8 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "dirt_1"
+12/texture = ExtResource( 1 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 128, 48, 16, 16 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 8, 8 )
+12/navigation_offset = Vector2( 8, 8 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "flower"
+13/texture = ExtResource( 1 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 192, 48, 16, 16 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 8, 8 )
+13/navigation_offset = Vector2( 8, 8 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "bush"
+14/texture = ExtResource( 1 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 192, 16, 16, 16 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 8, 8 )
+14/navigation_offset = Vector2( 8, 8 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "flower2"
+15/texture = ExtResource( 1 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 192, 32, 16, 16 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 8, 8 )
+15/navigation_offset = Vector2( 8, 8 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "rock_detail"
+16/texture = ExtResource( 1 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 272, 64, 16, 16 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 8, 8 )
+16/navigation_offset = Vector2( 8, 8 )
+16/shape_offset = Vector2( 8, 8 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+16/shape = SubResource( 4 )
+16/shape_one_way = false
+16/shape_one_way_margin = 1.0
+16/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+16/z_index = 0
+17/name = "rock1"
+17/texture = ExtResource( 1 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 224, 0, 16, 16 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 8, 8 )
+17/navigation_offset = Vector2( 8, 8 )
+17/shape_offset = Vector2( 8, 8 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+17/shape = SubResource( 5 )
+17/shape_one_way = false
+17/shape_one_way_margin = 1.0
+17/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+17/z_index = 0
+18/name = "rock2"
+18/texture = ExtResource( 1 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 288, 64, 16, 16 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 8, 8 )
+18/navigation_offset = Vector2( 8, 8 )
+18/shape_offset = Vector2( 8, 8 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+18/shape = SubResource( 5 )
+18/shape_one_way = false
+18/shape_one_way_margin = 1.0
+18/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+18/z_index = 0
+19/name = "rock3"
+19/texture = ExtResource( 1 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 288, 48, 16, 16 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 8, 8 )
+19/navigation_offset = Vector2( 8, 8 )
+19/shape_offset = Vector2( 8, 8 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+19/shape = SubResource( 5 )
+19/shape_one_way = false
+19/shape_one_way_margin = 1.0
+19/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+19/z_index = 0
+20/name = "rock_water"
+20/texture = ExtResource( 1 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 192, 96, 16, 16 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 8, 8 )
+20/navigation_offset = Vector2( 8, 8 )
+20/shape_offset = Vector2( 8, 8 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+20/shape = SubResource( 5 )
+20/shape_one_way = false
+20/shape_one_way_margin = 1.0
+20/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+20/z_index = 0
+21/name = "rock_water2"
+21/texture = ExtResource( 1 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 240, 16, 16, 16 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 8, 8 )
+21/navigation_offset = Vector2( 8, 8 )
+21/shape_offset = Vector2( 8, 8 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+21/shape = SubResource( 5 )
+21/shape_one_way = false
+21/shape_one_way_margin = 1.0
+21/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+21/z_index = 0
+22/name = "rock_water3"
+22/texture = ExtResource( 1 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 240, 0, 16, 16 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 8, 8 )
+22/navigation_offset = Vector2( 8, 8 )
+22/shape_offset = Vector2( 8, 8 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+22/shape = SubResource( 5 )
+22/shape_one_way = false
+22/shape_one_way_margin = 1.0
+22/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+22/z_index = 0
+23/name = "rock_vine"
+23/texture = ExtResource( 1 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 240, 48, 16, 16 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 8, 8 )
+23/navigation_offset = Vector2( 8, 8 )
+23/shape_offset = Vector2( 8, 8 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+23/shape = SubResource( 5 )
+23/shape_one_way = false
+23/shape_one_way_margin = 1.0
+23/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+23/z_index = 0
+24/name = "rock_vine2"
+24/texture = ExtResource( 1 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 240, 64, 16, 16 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 8, 8 )
+24/navigation_offset = Vector2( 8, 8 )
+24/shape_offset = Vector2( 8, 8 )
+24/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+24/shape = SubResource( 5 )
+24/shape_one_way = false
+24/shape_one_way_margin = 1.0
+24/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+24/z_index = 0
+25/name = "brick1"
+25/texture = ExtResource( 1 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 192, 208, 16, 16 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 8, 8 )
+25/navigation_offset = Vector2( 8, 8 )
+25/shape_offset = Vector2( 8, 8 )
+25/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+25/shape = SubResource( 5 )
+25/shape_one_way = false
+25/shape_one_way_margin = 1.0
+25/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+25/z_index = 0
+26/name = "brick2"
+26/texture = ExtResource( 1 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 432, 240, 16, 16 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 8, 8 )
+26/navigation_offset = Vector2( 8, 8 )
+26/shape_offset = Vector2( 8, 8 )
+26/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+26/shape = SubResource( 5 )
+26/shape_one_way = false
+26/shape_one_way_margin = 1.0
+26/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+26/z_index = 0
+27/name = "brick3"
+27/texture = ExtResource( 1 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 416, 240, 16, 16 )
+27/tile_mode = 0
+27/occluder_offset = Vector2( 8, 8 )
+27/navigation_offset = Vector2( 8, 8 )
+27/shape_offset = Vector2( 8, 8 )
+27/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+27/shape = SubResource( 5 )
+27/shape_one_way = false
+27/shape_one_way_margin = 1.0
+27/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+27/z_index = 0
+28/name = "brick4"
+28/texture = ExtResource( 1 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 400, 240, 16, 16 )
+28/tile_mode = 0
+28/occluder_offset = Vector2( 8, 8 )
+28/navigation_offset = Vector2( 8, 8 )
+28/shape_offset = Vector2( 8, 8 )
+28/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+28/shape = SubResource( 5 )
+28/shape_one_way = false
+28/shape_one_way_margin = 1.0
+28/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+28/z_index = 0
+29/name = "brick5"
+29/texture = ExtResource( 1 )
+29/tex_offset = Vector2( 0, 0 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 432, 272, 16, 16 )
+29/tile_mode = 0
+29/occluder_offset = Vector2( 8, 8 )
+29/navigation_offset = Vector2( 8, 8 )
+29/shape_offset = Vector2( 8, 8 )
+29/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+29/shape = SubResource( 5 )
+29/shape_one_way = false
+29/shape_one_way_margin = 1.0
+29/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+29/z_index = 0
+30/name = "brick6"
+30/texture = ExtResource( 1 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 352, 304, 16, 16 )
+30/tile_mode = 0
+30/occluder_offset = Vector2( 8, 8 )
+30/navigation_offset = Vector2( 8, 8 )
+30/shape_offset = Vector2( 8, 8 )
+30/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+30/shape = SubResource( 5 )
+30/shape_one_way = false
+30/shape_one_way_margin = 1.0
+30/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+30/z_index = 0
+31/name = "roof"
+31/texture = ExtResource( 1 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 368, 320, 16, 16 )
+31/tile_mode = 0
+31/occluder_offset = Vector2( 8, 8 )
+31/navigation_offset = Vector2( 8, 8 )
+31/shape_offset = Vector2( 8, 8 )
+31/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+31/shape = SubResource( 5 )
+31/shape_one_way = false
+31/shape_one_way_margin = 1.0
+31/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+31/z_index = 0
+32/name = "wall1"
+32/texture = ExtResource( 1 )
+32/tex_offset = Vector2( 0, 0 )
+32/modulate = Color( 1, 1, 1, 1 )
+32/region = Rect2( 400, 272, 16, 16 )
+32/tile_mode = 0
+32/occluder_offset = Vector2( 8, 8 )
+32/navigation_offset = Vector2( 8, 8 )
+32/shape_offset = Vector2( 8, 8 )
+32/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+32/shape = SubResource( 5 )
+32/shape_one_way = false
+32/shape_one_way_margin = 1.0
+32/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+32/z_index = 0
+33/name = "wall2"
+33/texture = ExtResource( 1 )
+33/tex_offset = Vector2( 0, 0 )
+33/modulate = Color( 1, 1, 1, 1 )
+33/region = Rect2( 352, 240, 16, 16 )
+33/tile_mode = 0
+33/occluder_offset = Vector2( 8, 8 )
+33/navigation_offset = Vector2( 8, 8 )
+33/shape_offset = Vector2( 8, 8 )
+33/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+33/shape = SubResource( 5 )
+33/shape_one_way = false
+33/shape_one_way_margin = 1.0
+33/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+33/z_index = 0
+34/name = "roof2"
+34/texture = ExtResource( 1 )
+34/tex_offset = Vector2( 0, 0 )
+34/modulate = Color( 1, 1, 1, 1 )
+34/region = Rect2( 432, 384, 16, 16 )
+34/tile_mode = 0
+34/occluder_offset = Vector2( 8, 8 )
+34/navigation_offset = Vector2( 8, 8 )
+34/shape_offset = Vector2( 8, 8 )
+34/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+34/shape = SubResource( 5 )
+34/shape_one_way = false
+34/shape_one_way_margin = 1.0
+34/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+34/z_index = 0
+35/name = "roof3"
+35/texture = ExtResource( 1 )
+35/tex_offset = Vector2( 0, 0 )
+35/modulate = Color( 1, 1, 1, 1 )
+35/region = Rect2( 320, 352, 16, 16 )
+35/tile_mode = 0
+35/occluder_offset = Vector2( 8, 8 )
+35/navigation_offset = Vector2( 8, 8 )
+35/shape_offset = Vector2( 8, 8 )
+35/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+35/shape = SubResource( 5 )
+35/shape_one_way = false
+35/shape_one_way_margin = 1.0
+35/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+35/z_index = 0
+36/name = "roof4"
+36/texture = ExtResource( 1 )
+36/tex_offset = Vector2( 0, 0 )
+36/modulate = Color( 1, 1, 1, 1 )
+36/region = Rect2( 400, 368, 16, 16 )
+36/tile_mode = 0
+36/occluder_offset = Vector2( 8, 8 )
+36/navigation_offset = Vector2( 8, 8 )
+36/shape_offset = Vector2( 8, 8 )
+36/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+36/shape = SubResource( 5 )
+36/shape_one_way = false
+36/shape_one_way_margin = 1.0
+36/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+36/z_index = 0
+37/name = "roof5"
+37/texture = ExtResource( 1 )
+37/tex_offset = Vector2( 0, 0 )
+37/modulate = Color( 1, 1, 1, 1 )
+37/region = Rect2( 400, 352, 16, 16 )
+37/tile_mode = 0
+37/occluder_offset = Vector2( 8, 8 )
+37/navigation_offset = Vector2( 8, 8 )
+37/shape_offset = Vector2( 8, 8 )
+37/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+37/shape = SubResource( 5 )
+37/shape_one_way = false
+37/shape_one_way_margin = 1.0
+37/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+37/z_index = 0
+38/name = "roof6"
+38/texture = ExtResource( 1 )
+38/tex_offset = Vector2( 0, 0 )
+38/modulate = Color( 1, 1, 1, 1 )
+38/region = Rect2( 352, 352, 16, 16 )
+38/tile_mode = 0
+38/occluder_offset = Vector2( 8, 8 )
+38/navigation_offset = Vector2( 8, 8 )
+38/shape_offset = Vector2( 8, 8 )
+38/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+38/shape = SubResource( 5 )
+38/shape_one_way = false
+38/shape_one_way_margin = 1.0
+38/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+38/z_index = 0
+39/name = "roof7"
+39/texture = ExtResource( 1 )
+39/tex_offset = Vector2( 0, 0 )
+39/modulate = Color( 1, 1, 1, 1 )
+39/region = Rect2( 416, 368, 16, 16 )
+39/tile_mode = 0
+39/occluder_offset = Vector2( 8, 8 )
+39/navigation_offset = Vector2( 8, 8 )
+39/shape_offset = Vector2( 8, 8 )
+39/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+39/shape = SubResource( 5 )
+39/shape_one_way = false
+39/shape_one_way_margin = 1.0
+39/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+39/z_index = 0
+40/name = "roof8"
+40/texture = ExtResource( 1 )
+40/tex_offset = Vector2( 0, 0 )
+40/modulate = Color( 1, 1, 1, 1 )
+40/region = Rect2( 416, 352, 16, 16 )
+40/tile_mode = 0
+40/occluder_offset = Vector2( 8, 8 )
+40/navigation_offset = Vector2( 8, 8 )
+40/shape_offset = Vector2( 8, 8 )
+40/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+40/shape = SubResource( 5 )
+40/shape_one_way = false
+40/shape_one_way_margin = 1.0
+40/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+40/z_index = 0
+41/name = "wooden_platform"
+41/texture = ExtResource( 1 )
+41/tex_offset = Vector2( 0, 0 )
+41/modulate = Color( 1, 1, 1, 1 )
+41/region = Rect2( 320, 320, 16, 16 )
+41/tile_mode = 0
+41/occluder_offset = Vector2( 8, 8 )
+41/navigation_offset = Vector2( 8, 8 )
+41/shape_offset = Vector2( 0, 0 )
+41/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+41/shape_one_way = false
+41/shape_one_way_margin = 0.0
+41/shapes = [  ]
+41/z_index = 0
+42/name = "wooden_platform2"
+42/texture = ExtResource( 1 )
+42/tex_offset = Vector2( 0, 0 )
+42/modulate = Color( 1, 1, 1, 1 )
+42/region = Rect2( 336, 320, 16, 16 )
+42/tile_mode = 0
+42/occluder_offset = Vector2( 8, 8 )
+42/navigation_offset = Vector2( 8, 8 )
+42/shape_offset = Vector2( 0, 0 )
+42/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+42/shape_one_way = false
+42/shape_one_way_margin = 0.0
+42/shapes = [  ]
+42/z_index = 0
+43/name = "wooden_platform3"
+43/texture = ExtResource( 1 )
+43/tex_offset = Vector2( 0, 0 )
+43/modulate = Color( 1, 1, 1, 1 )
+43/region = Rect2( 352, 320, 16, 16 )
+43/tile_mode = 0
+43/occluder_offset = Vector2( 8, 8 )
+43/navigation_offset = Vector2( 8, 8 )
+43/shape_offset = Vector2( 0, 0 )
+43/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+43/shape_one_way = false
+43/shape_one_way_margin = 0.0
+43/shapes = [  ]
+43/z_index = 0
+44/name = "wooden_platform4"
+44/texture = ExtResource( 1 )
+44/tex_offset = Vector2( 0, 0 )
+44/modulate = Color( 1, 1, 1, 1 )
+44/region = Rect2( 352, 336, 16, 16 )
+44/tile_mode = 0
+44/occluder_offset = Vector2( 8, 8 )
+44/navigation_offset = Vector2( 8, 8 )
+44/shape_offset = Vector2( 0, 0 )
+44/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+44/shape_one_way = false
+44/shape_one_way_margin = 0.0
+44/shapes = [  ]
+44/z_index = 0
+45/name = "wooden_platform5"
+45/texture = ExtResource( 1 )
+45/tex_offset = Vector2( 0, 0 )
+45/modulate = Color( 1, 1, 1, 1 )
+45/region = Rect2( 320, 336, 16, 16 )
+45/tile_mode = 0
+45/occluder_offset = Vector2( 8, 8 )
+45/navigation_offset = Vector2( 8, 8 )
+45/shape_offset = Vector2( 0, 0 )
+45/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+45/shape_one_way = false
+45/shape_one_way_margin = 0.0
+45/shapes = [  ]
+45/z_index = 0
+46/name = "chimney"
+46/texture = ExtResource( 1 )
+46/tex_offset = Vector2( 0, 0 )
+46/modulate = Color( 1, 1, 1, 1 )
+46/region = Rect2( 432, 336, 16, 16 )
+46/tile_mode = 0
+46/occluder_offset = Vector2( 8, 8 )
+46/navigation_offset = Vector2( 8, 8 )
+46/shape_offset = Vector2( 0, 0 )
+46/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+46/shape_one_way = false
+46/shape_one_way_margin = 0.0
+46/shapes = [  ]
+46/z_index = 0
+47/name = "anvil"
+47/texture = ExtResource( 1 )
+47/tex_offset = Vector2( 0, 0 )
+47/modulate = Color( 1, 1, 1, 1 )
+47/region = Rect2( 336, 352, 16, 16 )
+47/tile_mode = 0
+47/occluder_offset = Vector2( 8, 8 )
+47/navigation_offset = Vector2( 8, 8 )
+47/shape_offset = Vector2( 0, 0 )
+47/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+47/shape_one_way = false
+47/shape_one_way_margin = 0.0
+47/shapes = [  ]
+47/z_index = 0
+48/name = "banner_top"
+48/texture = ExtResource( 1 )
+48/tex_offset = Vector2( 0, 0 )
+48/modulate = Color( 1, 1, 1, 1 )
+48/region = Rect2( 320, 384, 16, 16 )
+48/tile_mode = 0
+48/occluder_offset = Vector2( 8, 8 )
+48/navigation_offset = Vector2( 8, 8 )
+48/shape_offset = Vector2( 0, 0 )
+48/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+48/shape_one_way = false
+48/shape_one_way_margin = 0.0
+48/shapes = [  ]
+48/z_index = 0
+49/name = "banner_top2"
+49/texture = ExtResource( 1 )
+49/tex_offset = Vector2( 0, 0 )
+49/modulate = Color( 1, 1, 1, 1 )
+49/region = Rect2( 320, 400, 16, 16 )
+49/tile_mode = 0
+49/occluder_offset = Vector2( 8, 8 )
+49/navigation_offset = Vector2( 8, 8 )
+49/shape_offset = Vector2( 0, 0 )
+49/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+49/shape_one_way = false
+49/shape_one_way_margin = 0.0
+49/shapes = [  ]
+49/z_index = 0
+50/name = "trash_can"
+50/texture = ExtResource( 1 )
+50/tex_offset = Vector2( 0, 0 )
+50/modulate = Color( 1, 1, 1, 1 )
+50/region = Rect2( 416, 432, 16, 16 )
+50/tile_mode = 0
+50/occluder_offset = Vector2( 8, 8 )
+50/navigation_offset = Vector2( 8, 8 )
+50/shape_offset = Vector2( 8, 8 )
+50/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+50/shape = SubResource( 6 )
+50/shape_one_way = false
+50/shape_one_way_margin = 1.0
+50/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+50/z_index = 0
+51/name = "window"
+51/texture = ExtResource( 1 )
+51/tex_offset = Vector2( 0, 0 )
+51/modulate = Color( 1, 1, 1, 1 )
+51/region = Rect2( 384, 352, 16, 16 )
+51/tile_mode = 0
+51/occluder_offset = Vector2( 8, 8 )
+51/navigation_offset = Vector2( 8, 8 )
+51/shape_offset = Vector2( 8, 8 )
+51/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+51/shape = SubResource( 5 )
+51/shape_one_way = false
+51/shape_one_way_margin = 1.0
+51/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+51/z_index = 0
+52/name = "dungeon_brick"
+52/texture = ExtResource( 1 )
+52/tex_offset = Vector2( 0, 0 )
+52/modulate = Color( 1, 1, 1, 1 )
+52/region = Rect2( 16, 432, 16, 16 )
+52/tile_mode = 0
+52/occluder_offset = Vector2( 8, 8 )
+52/navigation_offset = Vector2( 8, 8 )
+52/shape_offset = Vector2( 8, 8 )
+52/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+52/shape = SubResource( 5 )
+52/shape_one_way = false
+52/shape_one_way_margin = 1.0
+52/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+52/z_index = 0
+53/name = "dungeon_brick2"
+53/texture = ExtResource( 1 )
+53/tex_offset = Vector2( 0, 0 )
+53/modulate = Color( 1, 1, 1, 1 )
+53/region = Rect2( 64, 416, 16, 16 )
+53/tile_mode = 0
+53/occluder_offset = Vector2( 8, 8 )
+53/navigation_offset = Vector2( 8, 8 )
+53/shape_offset = Vector2( 8, 8 )
+53/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+53/shape = SubResource( 5 )
+53/shape_one_way = false
+53/shape_one_way_margin = 1.0
+53/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+53/z_index = 0
+54/name = "dungeon_brick3"
+54/texture = ExtResource( 1 )
+54/tex_offset = Vector2( 0, 0 )
+54/modulate = Color( 1, 1, 1, 1 )
+54/region = Rect2( 80, 416, 16, 16 )
+54/tile_mode = 0
+54/occluder_offset = Vector2( 8, 8 )
+54/navigation_offset = Vector2( 8, 8 )
+54/shape_offset = Vector2( 8, 8 )
+54/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+54/shape = SubResource( 5 )
+54/shape_one_way = false
+54/shape_one_way_margin = 1.0
+54/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+54/z_index = 0
+55/name = "dungeon_brick4"
+55/texture = ExtResource( 1 )
+55/tex_offset = Vector2( 0, 0 )
+55/modulate = Color( 1, 1, 1, 1 )
+55/region = Rect2( 48, 432, 16, 16 )
+55/tile_mode = 0
+55/occluder_offset = Vector2( 8, 8 )
+55/navigation_offset = Vector2( 8, 8 )
+55/shape_offset = Vector2( 8, 8 )
+55/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+55/shape = SubResource( 5 )
+55/shape_one_way = false
+55/shape_one_way_margin = 1.0
+55/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+55/z_index = 0
+56/name = "dungeon_brick5"
+56/texture = ExtResource( 1 )
+56/tex_offset = Vector2( 0, 0 )
+56/modulate = Color( 1, 1, 1, 1 )
+56/region = Rect2( 48, 416, 16, 16 )
+56/tile_mode = 0
+56/occluder_offset = Vector2( 8, 8 )
+56/navigation_offset = Vector2( 8, 8 )
+56/shape_offset = Vector2( 8, 8 )
+56/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+56/shape = SubResource( 5 )
+56/shape_one_way = false
+56/shape_one_way_margin = 1.0
+56/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+56/z_index = 0
+57/name = "dungeon_brick6"
+57/texture = ExtResource( 1 )
+57/tex_offset = Vector2( 0, 0 )
+57/modulate = Color( 1, 1, 1, 1 )
+57/region = Rect2( 0, 448, 16, 16 )
+57/tile_mode = 0
+57/occluder_offset = Vector2( 8, 8 )
+57/navigation_offset = Vector2( 8, 8 )
+57/shape_offset = Vector2( 8, 8 )
+57/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+57/shape = SubResource( 5 )
+57/shape_one_way = false
+57/shape_one_way_margin = 1.0
+57/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+57/z_index = 0
+58/name = "dungeon_brick7"
+58/texture = ExtResource( 1 )
+58/tex_offset = Vector2( 0, 0 )
+58/modulate = Color( 1, 1, 1, 1 )
+58/region = Rect2( 96, 176, 16, 16 )
+58/tile_mode = 0
+58/occluder_offset = Vector2( 8, 8 )
+58/navigation_offset = Vector2( 8, 8 )
+58/shape_offset = Vector2( 8, 8 )
+58/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+58/shape = SubResource( 5 )
+58/shape_one_way = false
+58/shape_one_way_margin = 1.0
+58/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+58/z_index = 0
+59/name = "dungeon_brick8"
+59/texture = ExtResource( 1 )
+59/tex_offset = Vector2( 0, 0 )
+59/modulate = Color( 1, 1, 1, 1 )
+59/region = Rect2( 112, 176, 16, 16 )
+59/tile_mode = 0
+59/occluder_offset = Vector2( 8, 8 )
+59/navigation_offset = Vector2( 8, 8 )
+59/shape_offset = Vector2( 8, 8 )
+59/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+59/shape = SubResource( 5 )
+59/shape_one_way = false
+59/shape_one_way_margin = 1.0
+59/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+59/z_index = 0
+60/name = "dungeon_brick9"
+60/texture = ExtResource( 1 )
+60/tex_offset = Vector2( 0, 0 )
+60/modulate = Color( 1, 1, 1, 1 )
+60/region = Rect2( 128, 192, 16, 16 )
+60/tile_mode = 0
+60/occluder_offset = Vector2( 8, 8 )
+60/navigation_offset = Vector2( 8, 8 )
+60/shape_offset = Vector2( 8, 8 )
+60/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+60/shape = SubResource( 5 )
+60/shape_one_way = false
+60/shape_one_way_margin = 1.0
+60/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+60/z_index = 0
+61/name = "dungeon_brick10"
+61/texture = ExtResource( 1 )
+61/tex_offset = Vector2( 0, 0 )
+61/modulate = Color( 1, 1, 1, 1 )
+61/region = Rect2( 64, 192, 16, 16 )
+61/tile_mode = 0
+61/occluder_offset = Vector2( 8, 8 )
+61/navigation_offset = Vector2( 8, 8 )
+61/shape_offset = Vector2( 8, 8 )
+61/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+61/shape = SubResource( 5 )
+61/shape_one_way = false
+61/shape_one_way_margin = 1.0
+61/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+61/z_index = 0
+62/name = "dungeon_brick11"
+62/texture = ExtResource( 1 )
+62/tex_offset = Vector2( 0, 0 )
+62/modulate = Color( 1, 1, 1, 1 )
+62/region = Rect2( 32, 192, 16, 16 )
+62/tile_mode = 0
+62/occluder_offset = Vector2( 8, 8 )
+62/navigation_offset = Vector2( 8, 8 )
+62/shape_offset = Vector2( 8, 8 )
+62/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+62/shape = SubResource( 5 )
+62/shape_one_way = false
+62/shape_one_way_margin = 1.0
+62/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+62/z_index = 0
+63/name = "dungeon_brick12"
+63/texture = ExtResource( 1 )
+63/tex_offset = Vector2( 0, 0 )
+63/modulate = Color( 1, 1, 1, 1 )
+63/region = Rect2( 16, 144, 16, 16 )
+63/tile_mode = 0
+63/occluder_offset = Vector2( 8, 8 )
+63/navigation_offset = Vector2( 8, 8 )
+63/shape_offset = Vector2( 8, 8 )
+63/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+63/shape = SubResource( 5 )
+63/shape_one_way = false
+63/shape_one_way_margin = 1.0
+63/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+63/z_index = 0
+64/name = "dungeon_brick13"
+64/texture = ExtResource( 1 )
+64/tex_offset = Vector2( 0, 0 )
+64/modulate = Color( 1, 1, 1, 1 )
+64/region = Rect2( 16, 160, 16, 16 )
+64/tile_mode = 0
+64/occluder_offset = Vector2( 8, 8 )
+64/navigation_offset = Vector2( 8, 8 )
+64/shape_offset = Vector2( 8, 8 )
+64/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+64/shape = SubResource( 5 )
+64/shape_one_way = false
+64/shape_one_way_margin = 1.0
+64/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+64/z_index = 0
+65/name = "dungeon_brick14"
+65/texture = ExtResource( 1 )
+65/tex_offset = Vector2( 0, 0 )
+65/modulate = Color( 1, 1, 1, 1 )
+65/region = Rect2( 176, 160, 16, 16 )
+65/tile_mode = 0
+65/occluder_offset = Vector2( 8, 8 )
+65/navigation_offset = Vector2( 8, 8 )
+65/shape_offset = Vector2( 8, 8 )
+65/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+65/shape = SubResource( 5 )
+65/shape_one_way = false
+65/shape_one_way_margin = 1.0
+65/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+65/z_index = 0
+66/name = "dungeon_brick15"
+66/texture = ExtResource( 1 )
+66/tex_offset = Vector2( 0, 0 )
+66/modulate = Color( 1, 1, 1, 1 )
+66/region = Rect2( 48, 128, 16, 16 )
+66/tile_mode = 0
+66/occluder_offset = Vector2( 8, 8 )
+66/navigation_offset = Vector2( 8, 8 )
+66/shape_offset = Vector2( 8, 8 )
+66/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+66/shape = SubResource( 5 )
+66/shape_one_way = false
+66/shape_one_way_margin = 1.0
+66/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+66/z_index = 0
+67/name = "dungeon_brick16"
+67/texture = ExtResource( 1 )
+67/tex_offset = Vector2( 0, 0 )
+67/modulate = Color( 1, 1, 1, 1 )
+67/region = Rect2( 16, 112, 16, 16 )
+67/tile_mode = 0
+67/occluder_offset = Vector2( 8, 8 )
+67/navigation_offset = Vector2( 8, 8 )
+67/shape_offset = Vector2( 8, 8 )
+67/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+67/shape = SubResource( 5 )
+67/shape_one_way = false
+67/shape_one_way_margin = 1.0
+67/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+67/z_index = 0
+68/name = "dungeon_brick17"
+68/texture = ExtResource( 1 )
+68/tex_offset = Vector2( 0, 0 )
+68/modulate = Color( 1, 1, 1, 1 )
+68/region = Rect2( 0, 192, 16, 16 )
+68/tile_mode = 0
+68/occluder_offset = Vector2( 8, 8 )
+68/navigation_offset = Vector2( 8, 8 )
+68/shape_offset = Vector2( 8, 8 )
+68/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+68/shape = SubResource( 5 )
+68/shape_one_way = false
+68/shape_one_way_margin = 1.0
+68/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+68/z_index = 0
+69/name = "column_top"
+69/texture = ExtResource( 1 )
+69/tex_offset = Vector2( 0, 0 )
+69/modulate = Color( 1, 1, 1, 1 )
+69/region = Rect2( 0, 160, 16, 16 )
+69/tile_mode = 0
+69/occluder_offset = Vector2( 8, 8 )
+69/navigation_offset = Vector2( 8, 8 )
+69/shape_offset = Vector2( 0, 0 )
+69/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+69/shape_one_way = false
+69/shape_one_way_margin = 0.0
+69/shapes = [  ]
+69/z_index = 0
+70/name = "column_top2"
+70/texture = ExtResource( 1 )
+70/tex_offset = Vector2( 0, 0 )
+70/modulate = Color( 1, 1, 1, 1 )
+70/region = Rect2( 0, 176, 16, 16 )
+70/tile_mode = 0
+70/occluder_offset = Vector2( 8, 8 )
+70/navigation_offset = Vector2( 8, 8 )
+70/shape_offset = Vector2( 0, 0 )
+70/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+70/shape_one_way = false
+70/shape_one_way_margin = 0.0
+70/shapes = [  ]
+70/z_index = 0
+71/name = "dungeon_roof"
+71/texture = ExtResource( 1 )
+71/tex_offset = Vector2( 0, 0 )
+71/modulate = Color( 1, 1, 1, 1 )
+71/region = Rect2( 80, 368, 16, 16 )
+71/tile_mode = 0
+71/occluder_offset = Vector2( 8, 8 )
+71/navigation_offset = Vector2( 8, 8 )
+71/shape_offset = Vector2( 8, 8 )
+71/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+71/shape = SubResource( 5 )
+71/shape_one_way = false
+71/shape_one_way_margin = 1.0
+71/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+71/z_index = 0
+72/name = "dungeon_roof2"
+72/texture = ExtResource( 1 )
+72/tex_offset = Vector2( 0, 0 )
+72/modulate = Color( 1, 1, 1, 1 )
+72/region = Rect2( 96, 368, 16, 16 )
+72/tile_mode = 0
+72/occluder_offset = Vector2( 8, 8 )
+72/navigation_offset = Vector2( 8, 8 )
+72/shape_offset = Vector2( 8, 8 )
+72/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+72/shape = SubResource( 5 )
+72/shape_one_way = false
+72/shape_one_way_margin = 1.0
+72/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+72/z_index = 0
+73/name = "dungeon_roof3"
+73/texture = ExtResource( 1 )
+73/tex_offset = Vector2( 0, 0 )
+73/modulate = Color( 1, 1, 1, 1 )
+73/region = Rect2( 112, 368, 16, 16 )
+73/tile_mode = 0
+73/occluder_offset = Vector2( 8, 8 )
+73/navigation_offset = Vector2( 8, 8 )
+73/shape_offset = Vector2( 8, 8 )
+73/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+73/shape = SubResource( 5 )
+73/shape_one_way = false
+73/shape_one_way_margin = 1.0
+73/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+73/z_index = 0
+74/name = "dungeon_roof4"
+74/texture = ExtResource( 1 )
+74/tex_offset = Vector2( 0, 0 )
+74/modulate = Color( 1, 1, 1, 1 )
+74/region = Rect2( 112, 384, 16, 16 )
+74/tile_mode = 0
+74/occluder_offset = Vector2( 8, 8 )
+74/navigation_offset = Vector2( 8, 8 )
+74/shape_offset = Vector2( 8, 8 )
+74/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+74/shape = SubResource( 5 )
+74/shape_one_way = false
+74/shape_one_way_margin = 1.0
+74/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+74/z_index = 0
+75/name = "dungeon_roof5"
+75/texture = ExtResource( 1 )
+75/tex_offset = Vector2( 0, 0 )
+75/modulate = Color( 1, 1, 1, 1 )
+75/region = Rect2( 112, 400, 16, 16 )
+75/tile_mode = 0
+75/occluder_offset = Vector2( 8, 8 )
+75/navigation_offset = Vector2( 8, 8 )
+75/shape_offset = Vector2( 8, 8 )
+75/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+75/shape = SubResource( 5 )
+75/shape_one_way = false
+75/shape_one_way_margin = 1.0
+75/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+75/z_index = 0
+76/name = "dungeon_roof7"
+76/texture = ExtResource( 1 )
+76/tex_offset = Vector2( 0, 0 )
+76/modulate = Color( 1, 1, 1, 1 )
+76/region = Rect2( 96, 400, 16, 16 )
+76/tile_mode = 0
+76/occluder_offset = Vector2( 8, 8 )
+76/navigation_offset = Vector2( 8, 8 )
+76/shape_offset = Vector2( 8, 8 )
+76/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+76/shape = SubResource( 5 )
+76/shape_one_way = false
+76/shape_one_way_margin = 1.0
+76/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+76/z_index = 0
+77/name = "dungeon_roof8"
+77/texture = ExtResource( 1 )
+77/tex_offset = Vector2( 0, 0 )
+77/modulate = Color( 1, 1, 1, 1 )
+77/region = Rect2( 80, 400, 16, 16 )
+77/tile_mode = 0
+77/occluder_offset = Vector2( 8, 8 )
+77/navigation_offset = Vector2( 8, 8 )
+77/shape_offset = Vector2( 8, 8 )
+77/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+77/shape = SubResource( 5 )
+77/shape_one_way = false
+77/shape_one_way_margin = 1.0
+77/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+77/z_index = 0
+78/name = "dungeon_roof6"
+78/texture = ExtResource( 1 )
+78/tex_offset = Vector2( 0, 0 )
+78/modulate = Color( 1, 1, 1, 1 )
+78/region = Rect2( 80, 384, 16, 16 )
+78/tile_mode = 0
+78/occluder_offset = Vector2( 8, 8 )
+78/navigation_offset = Vector2( 8, 8 )
+78/shape_offset = Vector2( 8, 8 )
+78/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+78/shape = SubResource( 5 )
+78/shape_one_way = false
+78/shape_one_way_margin = 1.0
+78/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+78/z_index = 0
+79/name = "dungeon_dark"
+79/texture = ExtResource( 1 )
+79/tex_offset = Vector2( 0, 0 )
+79/modulate = Color( 1, 1, 1, 1 )
+79/region = Rect2( 80, 432, 16, 16 )
+79/tile_mode = 0
+79/occluder_offset = Vector2( 8, 8 )
+79/navigation_offset = Vector2( 8, 8 )
+79/shape_offset = Vector2( 8, 8 )
+79/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+79/shape = SubResource( 5 )
+79/shape_one_way = false
+79/shape_one_way_margin = 1.0
+79/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+79/z_index = 0
+80/name = "dungeon_dark2"
+80/texture = ExtResource( 1 )
+80/tex_offset = Vector2( 0, 0 )
+80/modulate = Color( 1, 1, 1, 1 )
+80/region = Rect2( 96, 464, 16, 16 )
+80/tile_mode = 0
+80/occluder_offset = Vector2( 8, 8 )
+80/navigation_offset = Vector2( 8, 8 )
+80/shape_offset = Vector2( 8, 8 )
+80/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+80/shape = SubResource( 5 )
+80/shape_one_way = false
+80/shape_one_way_margin = 1.0
+80/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+80/z_index = 0
+81/name = "wood_wall"
+81/texture = ExtResource( 1 )
+81/tex_offset = Vector2( 0, 0 )
+81/modulate = Color( 1, 1, 1, 1 )
+81/region = Rect2( 32, 224, 16, 16 )
+81/tile_mode = 0
+81/occluder_offset = Vector2( 8, 8 )
+81/navigation_offset = Vector2( 8, 8 )
+81/shape_offset = Vector2( 8, 8 )
+81/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+81/shape = SubResource( 5 )
+81/shape_one_way = false
+81/shape_one_way_margin = 1.0
+81/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+81/z_index = 0
+82/name = "wood_wall3"
+82/texture = ExtResource( 1 )
+82/tex_offset = Vector2( 0, 0 )
+82/modulate = Color( 1, 1, 1, 1 )
+82/region = Rect2( 0, 320, 16, 16 )
+82/tile_mode = 0
+82/occluder_offset = Vector2( 8, 8 )
+82/navigation_offset = Vector2( 8, 8 )
+82/shape_offset = Vector2( 8, 8 )
+82/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+82/shape = SubResource( 5 )
+82/shape_one_way = false
+82/shape_one_way_margin = 1.0
+82/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+82/z_index = 0
+83/name = "wood_wall4"
+83/texture = ExtResource( 1 )
+83/tex_offset = Vector2( 0, 0 )
+83/modulate = Color( 1, 1, 1, 1 )
+83/region = Rect2( 16, 272, 16, 16 )
+83/tile_mode = 0
+83/occluder_offset = Vector2( 8, 8 )
+83/navigation_offset = Vector2( 8, 8 )
+83/shape_offset = Vector2( 8, 8 )
+83/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+83/shape = SubResource( 5 )
+83/shape_one_way = false
+83/shape_one_way_margin = 1.0
+83/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+83/z_index = 0
+84/name = "wood_wall5"
+84/texture = ExtResource( 1 )
+84/tex_offset = Vector2( 0, 0 )
+84/modulate = Color( 1, 1, 1, 1 )
+84/region = Rect2( 16, 240, 16, 16 )
+84/tile_mode = 0
+84/occluder_offset = Vector2( 8, 8 )
+84/navigation_offset = Vector2( 8, 8 )
+84/shape_offset = Vector2( 8, 8 )
+84/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+84/shape = SubResource( 5 )
+84/shape_one_way = false
+84/shape_one_way_margin = 1.0
+84/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+84/z_index = 0
+85/name = "wood_wall6"
+85/texture = ExtResource( 1 )
+85/tex_offset = Vector2( 0, 0 )
+85/modulate = Color( 1, 1, 1, 1 )
+85/region = Rect2( 160, 240, 16, 16 )
+85/tile_mode = 0
+85/occluder_offset = Vector2( 8, 8 )
+85/navigation_offset = Vector2( 8, 8 )
+85/shape_offset = Vector2( 8, 8 )
+85/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+85/shape = SubResource( 5 )
+85/shape_one_way = false
+85/shape_one_way_margin = 1.0
+85/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+85/z_index = 0
+86/name = "wood_lantern"
+86/texture = ExtResource( 1 )
+86/tex_offset = Vector2( 0, 0 )
+86/modulate = Color( 1, 1, 1, 1 )
+86/region = Rect2( 160, 208, 16, 16 )
+86/tile_mode = 0
+86/occluder_offset = Vector2( 8, 8 )
+86/navigation_offset = Vector2( 8, 8 )
+86/shape_offset = Vector2( 8, 8 )
+86/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+86/shape = SubResource( 5 )
+86/shape_one_way = false
+86/shape_one_way_margin = 1.0
+86/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+86/z_index = 0
+87/name = "red_wall"
+87/texture = ExtResource( 1 )
+87/tex_offset = Vector2( 0, 0 )
+87/modulate = Color( 1, 1, 1, 1 )
+87/region = Rect2( 176, 208, 16, 16 )
+87/tile_mode = 0
+87/occluder_offset = Vector2( 8, 8 )
+87/navigation_offset = Vector2( 8, 8 )
+87/shape_offset = Vector2( 8, 8 )
+87/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+87/shape = SubResource( 5 )
+87/shape_one_way = false
+87/shape_one_way_margin = 1.0
+87/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+87/z_index = 0
+88/name = "wood_wall2"
+88/texture = ExtResource( 1 )
+88/tex_offset = Vector2( 0, 0 )
+88/modulate = Color( 1, 1, 1, 1 )
+88/region = Rect2( 32, 240, 16, 16 )
+88/tile_mode = 0
+88/occluder_offset = Vector2( 8, 8 )
+88/navigation_offset = Vector2( 8, 8 )
+88/shape_offset = Vector2( 8, 8 )
+88/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+88/shape = SubResource( 5 )
+88/shape_one_way = false
+88/shape_one_way_margin = 1.0
+88/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+88/z_index = 0
+89/name = "wood_roof"
+89/texture = ExtResource( 1 )
+89/tex_offset = Vector2( 0, 0 )
+89/modulate = Color( 1, 1, 1, 1 )
+89/region = Rect2( 0, 208, 16, 16 )
+89/tile_mode = 0
+89/occluder_offset = Vector2( 8, 8 )
+89/navigation_offset = Vector2( 8, 8 )
+89/shape_offset = Vector2( 8, 8 )
+89/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+89/shape = SubResource( 5 )
+89/shape_one_way = false
+89/shape_one_way_margin = 1.0
+89/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+89/z_index = 0
+90/name = "wood_roof3"
+90/texture = ExtResource( 1 )
+90/tex_offset = Vector2( 0, 0 )
+90/modulate = Color( 1, 1, 1, 1 )
+90/region = Rect2( 0, 240, 16, 16 )
+90/tile_mode = 0
+90/occluder_offset = Vector2( 8, 8 )
+90/navigation_offset = Vector2( 8, 8 )
+90/shape_offset = Vector2( 8, 8 )
+90/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+90/shape = SubResource( 5 )
+90/shape_one_way = false
+90/shape_one_way_margin = 1.0
+90/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+90/z_index = 0
+91/name = "wood_roof4"
+91/texture = ExtResource( 1 )
+91/tex_offset = Vector2( 0, 0 )
+91/modulate = Color( 1, 1, 1, 1 )
+91/region = Rect2( 80, 208, 16, 16 )
+91/tile_mode = 0
+91/occluder_offset = Vector2( 8, 8 )
+91/navigation_offset = Vector2( 8, 8 )
+91/shape_offset = Vector2( 8, 8 )
+91/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+91/shape = SubResource( 5 )
+91/shape_one_way = false
+91/shape_one_way_margin = 1.0
+91/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+91/z_index = 0
+92/name = "wood_roof2"
+92/texture = ExtResource( 1 )
+92/tex_offset = Vector2( 0, 0 )
+92/modulate = Color( 1, 1, 1, 1 )
+92/region = Rect2( 64, 208, 16, 16 )
+92/tile_mode = 0
+92/occluder_offset = Vector2( 8, 8 )
+92/navigation_offset = Vector2( 8, 8 )
+92/shape_offset = Vector2( 8, 8 )
+92/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+92/shape = SubResource( 5 )
+92/shape_one_way = false
+92/shape_one_way_margin = 1.0
+92/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+92/z_index = 0
+93/name = "door"
+93/texture = ExtResource( 1 )
+93/tex_offset = Vector2( 0, 0 )
+93/modulate = Color( 1, 1, 1, 1 )
+93/region = Rect2( 128, 464, 16, 16 )
+93/tile_mode = 0
+93/occluder_offset = Vector2( 8, 8 )
+93/navigation_offset = Vector2( 8, 8 )
+93/shape_offset = Vector2( 8, 8 )
+93/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+93/shape = SubResource( 5 )
+93/shape_one_way = false
+93/shape_one_way_margin = 1.0
+93/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+93/z_index = 0
+94/name = "darkness"
+94/texture = ExtResource( 1 )
+94/tex_offset = Vector2( 0, 0 )
+94/modulate = Color( 1, 1, 1, 1 )
+94/region = Rect2( 224, 128, 16, 16 )
+94/tile_mode = 0
+94/occluder_offset = Vector2( 8, 8 )
+94/navigation_offset = Vector2( 8, 8 )
+94/shape_offset = Vector2( 8, 8 )
+94/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+94/shape = SubResource( 5 )
+94/shape_one_way = false
+94/shape_one_way_margin = 1.0
+94/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+94/z_index = 0
+95/name = "doorway"
+95/texture = ExtResource( 1 )
+95/tex_offset = Vector2( 0, 0 )
+95/modulate = Color( 1, 1, 1, 1 )
+95/region = Rect2( 352, 272, 16, 16 )
+95/tile_mode = 0
+95/occluder_offset = Vector2( 8, 8 )
+95/navigation_offset = Vector2( 8, 8 )
+95/shape_offset = Vector2( 8, 8 )
+95/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+95/shape = SubResource( 5 )
+95/shape_one_way = false
+95/shape_one_way_margin = 1.0
+95/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+95/z_index = 0
+96/name = "doorway2"
+96/texture = ExtResource( 1 )
+96/tex_offset = Vector2( 0, 0 )
+96/modulate = Color( 1, 1, 1, 1 )
+96/region = Rect2( 352, 288, 16, 16 )
+96/tile_mode = 0
+96/occluder_offset = Vector2( 8, 8 )
+96/navigation_offset = Vector2( 8, 8 )
+96/shape_offset = Vector2( 8, 8 )
+96/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+96/shape = SubResource( 5 )
+96/shape_one_way = false
+96/shape_one_way_margin = 1.0
+96/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+96/z_index = 0
+97/name = "dark_stone"
+97/texture = ExtResource( 1 )
+97/tex_offset = Vector2( 0, 0 )
+97/modulate = Color( 1, 1, 1, 1 )
+97/region = Rect2( 16, 464, 16, 16 )
+97/tile_mode = 0
+97/occluder_offset = Vector2( 8, 8 )
+97/navigation_offset = Vector2( 8, 8 )
+97/shape_offset = Vector2( 8, 8 )
+97/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+97/shape = SubResource( 5 )
+97/shape_one_way = false
+97/shape_one_way_margin = 1.0
+97/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+97/z_index = 0
+98/name = "dark_stone2"
+98/texture = ExtResource( 1 )
+98/tex_offset = Vector2( 0, 0 )
+98/modulate = Color( 1, 1, 1, 1 )
+98/region = Rect2( 0, 464, 16, 16 )
+98/tile_mode = 0
+98/occluder_offset = Vector2( 8, 8 )
+98/navigation_offset = Vector2( 8, 8 )
+98/shape_offset = Vector2( 0, 0 )
+98/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+98/shape_one_way = false
+98/shape_one_way_margin = 0.0
+98/shapes = [  ]
+98/z_index = 0
+99/name = "cobblestone"
+99/texture = ExtResource( 1 )
+99/tex_offset = Vector2( 0, 0 )
+99/modulate = Color( 1, 1, 1, 1 )
+99/region = Rect2( 32, 464, 16, 16 )
+99/tile_mode = 0
+99/occluder_offset = Vector2( 8, 8 )
+99/navigation_offset = Vector2( 8, 8 )
+99/shape_offset = Vector2( 0, 0 )
+99/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+99/shape_one_way = false
+99/shape_one_way_margin = 0.0
+99/shapes = [  ]
+99/z_index = 0
+100/name = "cobblestone2"
+100/texture = ExtResource( 1 )
+100/tex_offset = Vector2( 0, 0 )
+100/modulate = Color( 1, 1, 1, 1 )
+100/region = Rect2( 448, 432, 16, 16 )
+100/tile_mode = 0
+100/occluder_offset = Vector2( 8, 8 )
+100/navigation_offset = Vector2( 8, 8 )
+100/shape_offset = Vector2( 0, 0 )
+100/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+100/shape_one_way = false
+100/shape_one_way_margin = 0.0
+100/shapes = [  ]
+100/z_index = 0
+101/name = "wood_door"
+101/texture = ExtResource( 1 )
+101/tex_offset = Vector2( 0, 0 )
+101/modulate = Color( 1, 1, 1, 1 )
+101/region = Rect2( 448, 352, 16, 16 )
+101/tile_mode = 0
+101/occluder_offset = Vector2( 8, 8 )
+101/navigation_offset = Vector2( 8, 8 )
+101/shape_offset = Vector2( 8, 8 )
+101/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+101/shape = SubResource( 1 )
+101/shape_one_way = false
+101/shape_one_way_margin = 1.0
+101/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+101/z_index = 0
+102/name = "wood_door2"
+102/texture = ExtResource( 1 )
+102/tex_offset = Vector2( 0, 0 )
+102/modulate = Color( 1, 1, 1, 1 )
+102/region = Rect2( 448, 368, 16, 16 )
+102/tile_mode = 0
+102/occluder_offset = Vector2( 8, 8 )
+102/navigation_offset = Vector2( 8, 8 )
+102/shape_offset = Vector2( 8, 8 )
+102/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+102/shape = SubResource( 2 )
+102/shape_one_way = false
+102/shape_one_way_margin = 1.0
+102/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+102/z_index = 0
+103/name = "sign"
+103/texture = ExtResource( 1 )
+103/tex_offset = Vector2( 0, 0 )
+103/modulate = Color( 1, 1, 1, 1 )
+103/region = Rect2( 448, 432, 16, 16 )
+103/tile_mode = 0
+103/occluder_offset = Vector2( 8, 8 )
+103/navigation_offset = Vector2( 8, 8 )
+103/shape_offset = Vector2( 8, 8 )
+103/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+103/shape = SubResource( 3 )
+103/shape_one_way = false
+103/shape_one_way_margin = 1.0
+103/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+103/z_index = 0

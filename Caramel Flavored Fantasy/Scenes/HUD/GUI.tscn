@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Graphics/HUD/hud-tileset.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/HUD/Curtain.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/HUD/GUI.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "down"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 190, 110 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "drop"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 192, -150 ), Vector2( 190, 110 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "rise"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 190, 110 ), Vector2( 192, -150 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "up"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 192, -150 ) ]
+}
+
+[node name="GUI" type="CanvasLayer" groups=[
+"GUI",
+]]
+script = ExtResource( 3 )
+
+[node name="Curtain" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 190, 110 )
+scale = Vector2( 8.77083, 5.51042 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Curtain"]
+anims/down = SubResource( 1 )
+anims/drop = SubResource( 2 )
+anims/rise = SubResource( 3 )
+anims/up = SubResource( 4 )
