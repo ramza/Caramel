@@ -19,6 +19,10 @@ func Release():
 	
 func _physics_process(_delta):
 
+	var up = Input.is_action_pressed("move_up")
+	var down = Input.is_action_pressed("move_down")
+	var left =Input.is_action_pressed("move_left")
+	var right = Input.is_action_pressed("move_right")
 	
 	var motion = Vector2()
 	
@@ -26,16 +30,16 @@ func _physics_process(_delta):
 		HandleAnimation(motion)
 		return
 	
-	if Input.is_action_pressed("move_up"):
+	if up and not (left or right):
 		motion += Vector2(0, -1)
 		direction = DIRECTION.UP
-	if Input.is_action_pressed("move_down"):
+	elif down and not(left or right):
 		motion += Vector2(0, 1)
 		direction = DIRECTION.DOWN
-	if Input.is_action_pressed("move_left"):
+	elif left and not(up or down):
 		motion += Vector2(-1, 0)
 		direction = DIRECTION.LEFT
-	if Input.is_action_pressed("move_right"):
+	elif right and not (up or down):
 		motion += Vector2(1, 0)
 		direction = DIRECTION.RIGHT
 	

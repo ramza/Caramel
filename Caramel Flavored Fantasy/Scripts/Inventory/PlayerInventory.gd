@@ -1,22 +1,40 @@
+# PLAYER INVENTORY
 extends Node
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+onready var item_database = GameManager.get_node("ItemDatabase")
 
-onready var item_database = get_node("ItemDatabase")
-
-var items = []
+var items = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	item_database.BuildDatabase()
 	
-	items.append(item_database.GetItemByID(0))
-	items.append(item_database.GetItemByName("Potion of Healing"))
-	items.append(item_database.GetItemByID(1))
-
-	for i in range(len(items)):
-		print(items[i].item_name)
+	AddItemByID(0,1)
+	AddItemByID(0)
+	AddItemByID(1)
+	AddItemByID(1)
+	AddItemByID(2)
+	AddItemByID(3)
+	AddItemByID(4)
+	AddItemByID(5)
+	AddItemByID(6)
+	
+	for key in items.keys():
+		var item = item_database.GetItemByID(key)
+		print(item.item_name, items[key])
+	
+	
+func GetItems():
+	return items
+	
+func AddItemByID(id,amount=1):
+	var item = item_database.GetItemByID(id)
+	
+	if items.has(id):
+		items[id] += amount
+		return
+	
+	else:
+		items[id] = amount
 	

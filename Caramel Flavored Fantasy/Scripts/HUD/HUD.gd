@@ -4,26 +4,37 @@ extends CanvasLayer
 #The HUD is in charge of the player menu system
 
 onready var hero_view = get_node("HeroView")
-
+onready var item_view = get_node("ItemView")
+onready var equip_view = get_node("EquipView")
+onready var hero_select_view = get_node("HeroSelectView")
 var paused = false
 var player
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player = get_tree().get_nodes_in_group("Player")[0]
-	hero_view.hide()
-	pass # Replace with function body.
+	HideAllViews()
 
 func _process(delta):
-	
-	if Input.is_action_just_pressed("ui_cancel"):
-		paused=not paused
+	if not paused and Input.is_action_just_pressed("ui_cancel"):
+		paused=true
 		
-		if paused:
-			hero_view.show()
-			hero_view.active=true
-			player.Freeze()
-		else:
-			hero_view.hide()
-			hero_view.active=false
-			player.Release()
+		OpenPlayerMenu()
+			
+func OpenPlayerMenu():
+	hero_view.show()
+	hero_view.Activate()
+	player.Freeze()
+	
+func ClosePlayerMenu():
+	HideAllViews()
+	hero_view.active=false
+	player.Release()
+	paused=false
+	
+func HideAllViews():
+	hero_view.hide()
+	item_view.hide()
+	hero_select_view.hide()
+	equip_view.hide()
+	
 		

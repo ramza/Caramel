@@ -1,15 +1,18 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Other/world_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Level/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Level/CameraRig.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Level/PlayerSpawner.gd" type="Script" id=4]
-[ext_resource path="res://Scenes/Level/Portal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Level/Portal.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/Level/CustomCamera.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/HUD/GUI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/HUD/PlayerMenu.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1, 1 )
 
 [node name="WorldMap" type="Node2D"]
 
@@ -50,6 +53,8 @@ position = Vector2( 86, 71 )
 
 [node name="PlayerMenu" parent="SCENE" instance=ExtResource( 8 )]
 
+[node name="GUI" parent="SCENE" instance=ExtResource( 7 )]
+
 [node name="LEVEL" type="Node2D" parent="."]
 
 [node name="TileMap" type="TileMap" parent="LEVEL"]
@@ -64,9 +69,12 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 917537, 71, 0, 917538, 71, 0, 917539, 71, 0, 917540, 71, 0, 917541, 71, 0, 917542, 71, 0, 917543, 71, 0, 983086, 71, 0, 983087, 71, 0, 983088, 71, 0, 983089, 71, 0, 1179683, 35, 0, 1245219, 35, 0, 1245220, 35, 0, 1310754, 35, 0, 1310756, 35, 0, 1310757, 37, 0, 1310758, 35, 0, 1310759, 35, 0, 1310770, 35, 0, 1310771, 37, 0, 1376292, 35, 0, 1376293, 35, 0, 1376294, 37, 0, 1376306, 35, 0, 1376307, 37, 0, 1376308, 37, 0, 1376309, 35, 0, 1376310, 37, 0, 1441810, 37, 0, 1441811, 37, 0, 1441824, 37, 0, 1441825, 37, 0, 1441829, 37, 0, 1441830, 37, 0, 1441831, 37, 0, 1441842, 35, 0, 1441843, 35, 0, 1441844, 37, 0, 1441845, 37, 0, 1441846, 37, 0, 1441847, 37, 0, 1507347, 37, 0, 1507348, 37, 0, 1507349, 37, 0, 1507355, 35, 0, 1507356, 35, 0, 1507363, 37, 0, 1507364, 37, 0, 1507366, 37, 0, 1507368, 37, 0, 1507379, 35, 0, 1507380, 37, 0, 1507381, 37, 0, 1507382, 37, 0, 1507383, 37, 0, 1507384, 37, 0, 1572883, 35, 0, 1572885, 77, 0, 1572886, 80, 0, 1572887, 80, 0, 1572888, 80, 0, 1572889, 80, 0, 1572890, 80, 0, 1572891, 80, 0, 1572893, 37, 0, 1572894, 37, 0, 1572898, 35, 0, 1572899, 35, 0, 1572900, 35, 0, 1572901, 35, 0, 1572916, 35, 0, 1572917, 35, 0, 1572918, 37, 0, 1572919, 37, 0, 1572920, 37, 0, 1638420, 35, 0, 1638422, 1, 0, 1638423, 1, 0, 1638424, 1, 0, 1638425, 1, 0, 1638426, 1, 0, 1638427, 1, 0, 1638428, 76, 0, 1638433, 35, 0, 1638434, 35, 0, 1638435, 35, 0, 1638436, 35, 0, 1638451, 35, 0, 1638454, 35, 0, 1638455, 35, 0, 1638456, 37, 0, 1638457, 35, 0, 1703958, 75, 0, 1703959, 1, 0, 1703960, 1, 0, 1703961, 1, 0, 1703962, 73, 0, 1703963, 35, 0, 1703968, 66, 0, 1703969, 67, 0, 1703970, 35, 0, 1703971, 35, 0, 1703972, 35, 0, 1703973, 65, 0, 1703974, 67, 0, 1703988, 35, 0, 1703990, 35, 0, 1703991, 35, 0, 1703992, 35, 0, 1703993, 35, 0, 1769492, 37, 0, 1769493, 37, 0, 1769495, 75, 0, 1769496, 1, 0, 1769497, 1, 0, 1769498, 76, 0, 1769499, 35, 0, 1769506, 66, 0, 1769507, 66, 0, 1769508, 66, 0, 1769511, 66, 0, 1769512, 67, 0, 1769524, 35, 0, 1769525, 37, 0, 1769526, 35, 0, 1769527, 35, 0, 1769528, 37, 0, 1769529, 35, 0, 1769530, 37, 0, 1835030, 37, 0, 1835033, 35, 0, 1835052, 37, 0, 1835063, 35, 0, 1835064, 35, 0, 1835065, 35, 0, 1835066, 37, 0, 1900590, 37, 0, 1900597, 37, 0, 1900598, 37, 0, 1900600, 35, 0, 1966130, 37, 0, 2228265, 69, 0, 2293801, 69, 0, 2359337, 69, 0, 2424873, 69, 0, 2490409, 69, 0 )
 
-[node name="Portal" parent="LEVEL" instance=ExtResource( 5 )]
+[node name="Portal" type="Area2D" parent="LEVEL"]
 position = Vector2( -24, 71 )
-spawn_point = "Main"
+script = ExtResource( 5 )
 destination = "CecilTown/CecilTown"
 
-[node name="GUI" parent="." instance=ExtResource( 7 )]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LEVEL/Portal"]
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="LEVEL/Portal"]

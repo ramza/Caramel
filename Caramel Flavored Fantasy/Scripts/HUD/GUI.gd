@@ -11,5 +11,5 @@ func _ready():
 
 
 func Transition():
-	curtain.Drop()
+	curtain.FadeOut()
 

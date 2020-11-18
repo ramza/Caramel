@@ -1,0 +1,118 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/Battle/BattleManager.gd" type="Script" id=1]
+[ext_resource path="res://Other/Fonts/m3x6.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Graphics/HUD/menu-cursor.png" type="Texture" id=3]
+[ext_resource path="res://Other/Fonts/Minecraftia-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Scenes/Battle/HeroPanel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Battle/BattleUI.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Battle/EnemyDataBase.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/Battle/EnemyParty.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/Battle/EnemyBattleNode.tscn" type="PackedScene" id=9]
+
+[sub_resource type="DynamicFont" id=2]
+extra_spacing_space = 1
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 8
+font_data = ExtResource( 4 )
+
+[node name="BattleArena" type="Node2D"]
+
+[node name="BattleManager" type="Node" parent="."]
+script = ExtResource( 1 )
+
+[node name="BattleTimer" type="Timer" parent="BattleManager"]
+
+[node name="BattleUI" type="CanvasLayer" parent="."]
+script = ExtResource( 6 )
+
+[node name="Container" type="Panel" parent="BattleUI"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = -9.0
+margin_top = -8.0
+margin_right = 394.0
+margin_bottom = 230.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeroPanel" parent="BattleUI/Container" instance=ExtResource( 5 )]
+
+[node name="MSGPanel" type="Panel" parent="BattleUI/Container"]
+margin_left = 75.0
+margin_top = 22.0
+margin_right = 330.0
+margin_bottom = 73.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BattleUI/Container/MSGPanel"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 246.0
+margin_bottom = 44.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "This is the battle msg box. Tell your player about the fight!"
+
+[node name="ActionPanel" type="Panel" parent="BattleUI/Container"]
+margin_left = 75.0
+margin_top = 22.0
+margin_right = 107.0
+margin_bottom = 81.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FightLbl" type="Label" parent="BattleUI/Container/ActionPanel"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 32.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 3 )
+text = "Fight"
+
+[node name="MagicLbl" type="Label" parent="BattleUI/Container/ActionPanel"]
+margin_left = 4.0
+margin_top = 19.0
+margin_right = 32.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 3 )
+text = "Magic"
+
+[node name="ItemLbl" type="Label" parent="BattleUI/Container/ActionPanel"]
+margin_left = 4.0
+margin_top = 33.0
+margin_right = 32.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 3 )
+text = "Item"
+
+[node name="RunLbl" type="Label" parent="BattleUI/Container/ActionPanel"]
+margin_left = 4.0
+margin_top = 45.0
+margin_right = 32.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 3 )
+text = "Run"
+
+[node name="Cursor" type="Sprite" parent="BattleUI/Container/ActionPanel"]
+position = Vector2( -5, 10 )
+texture = ExtResource( 3 )
+
+[node name="EnemyActorsPanel" type="Panel" parent="BattleUI/Container"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 75.0
+margin_top = 108.0
+margin_right = 330.0
+margin_bottom = 148.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnemyBattleNode" parent="BattleUI/Container/EnemyActorsPanel" instance=ExtResource( 9 )]
+
+[node name="EnemyParty" type="Node" parent="."]
+script = ExtResource( 8 )
+
+[node name="EnemyDataBase" type="Node" parent="EnemyParty"]
+script = ExtResource( 7 )

@@ -9,9 +9,14 @@ onready var anim = get_node("AnimationPlayer")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	anim.play("rise")
-	pass # Replace with function body.
+	FadeIn()
+	
 
+func FadeOut():
+	anim.play("fade_out")
+	
+func FadeIn():
+	anim.play("fade_in")
 
 func Drop():
 	anim.play("drop")
