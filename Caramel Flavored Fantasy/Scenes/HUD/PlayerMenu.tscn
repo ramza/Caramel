@@ -25,10 +25,10 @@ font_data = ExtResource( 3 )
 size = 8
 font_data = ExtResource( 11 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 4 )
 
 [node name="PlayerMenu" type="CanvasLayer" groups=[
@@ -497,6 +497,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="RemoveActionLbl" type="Label" parent="EquipView/EquipHeader"]
+margin_left = 63.492
+margin_top = -2.0
+margin_right = 107.492
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 1 )
+text = "Remove"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SortActionLbl" type="Label" parent="EquipView/EquipHeader"]
+margin_left = 129.0
+margin_top = -2.0
+margin_right = 173.0
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 1 )
+text = "Sort"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="EquipMenu" type="Panel" parent="EquipView"]
 margin_left = 79.0
 margin_top = 32.0
@@ -510,7 +532,7 @@ __meta__ = {
 margin_left = 7.0
 margin_right = 248.0
 margin_bottom = 93.0
-custom_fonts/normal_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 5 )
 text = "Sid"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -545,7 +567,7 @@ __meta__ = {
 margin_left = 79.0
 margin_top = 109.0
 margin_right = 208.0
-margin_bottom = 222.0
+margin_bottom = 242.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -562,16 +584,26 @@ __meta__ = {
 margin_left = 203.0
 margin_top = 109.0
 margin_right = 334.0
-margin_bottom = 223.0
+margin_bottom = 242.0
 
-[node name="StatsLbl" type="RichTextLabel" parent="EquipView/HeroStats"]
+[node name="StatsNameLbl" type="RichTextLabel" parent="EquipView/HeroStats"]
 margin_left = 13.0
 margin_top = 2.0
 margin_right = 131.0
 margin_bottom = 122.0
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 6 )
 text = "Strength: 10
 "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatsLbl" type="RichTextLabel" parent="EquipView/HeroStats"]
+margin_left = 75.0
+margin_top = 2.0
+margin_right = 143.0
+margin_bottom = 122.0
+custom_fonts/normal_font = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

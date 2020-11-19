@@ -18,9 +18,12 @@ var active = false
 var hero_view
 var total_items
 var ui_items = []
-
+var items
 var cursor_index = 0
+var list_position = 0
+var max_display_items = 10
 
+var inventory_length = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	hero_view = get_parent().get_node("HeroView")
@@ -30,28 +33,51 @@ func _ready():
 	item_database = GameManager.GetItemDataBase()
 	player_inventory = GameManager.inventory
 	
-	for i in range(10):
+	for i in range(max_display_items):
 		var item = item_label.instance()
 		items_container.add_child(item)
 		item_labels.append(item)
 		item.hide()
+
 	
-	var i = 0
+	items = player_inventory.GetItems()
+	inventory_length = len(items)
 	
-	var items = player_inventory.GetItems()
-	
-	for key in player_inventory.items.keys():
+	for i in range(max_display_items):
+		var key = player_inventory.item_key_order[i]
 		var item = GameManager.item_database.GetItemByID(key)
 		item_labels[i].text = item.item_name + " x" + str(items[key])
 		item_labels[i].show()
-		i+=1
 		ui_items.append(item)
 		
-	total_items = i
+	total_items = 10
 	timer.connect("timeout",self,"OnTimerTimeout")
-	
+
 	PositionCursor()
 	DescribeItem()
+	
+func UpdateItemList():
+	var list_min = 0
+	var list_max = max_display_items
+	
+	print(list_position)
+	if list_position >= max_display_items:
+		list_min = list_position-9
+		list_max = list_position+1
+		
+	for j in range(max_display_items):
+		item_labels[j].text = ""
+		item_labels[j].hide()
+	
+	var j = 0
+	
+	for i in range(list_min, list_max):
+		var key = player_inventory.item_key_order[i]
+		var item = GameManager.item_database.GetItemByID(key)
+		ui_items[j] = item
+		item_labels[j].text = item.item_name + " x" + str(items[key])
+		item_labels[j].show()
+		j+=1
 	
 func OnTimerTimeout():
 	active = true
@@ -74,18 +100,35 @@ func _process(delta):
 		self.hide()
 		
 	if active:
+		var changed = false
 		if Input.is_action_just_pressed("move_down"):
 			cursor_index += 1
+			changed = true
+			
+			list_position += 1
 			if cursor_index > total_items-1:
 				cursor_index=total_items-1
+			if list_position > inventory_length-1:
+				list_position = inventory_length-1
+				
 		elif Input.is_action_just_pressed("move_up"):
-			cursor_index -= 1
-			if cursor_index < 0:
-				cursor_index = 0
-				
-		PositionCursor()
-		DescribeItem()
-				
+			changed = true
+			list_position -= 1
+			if list_position < 0:
+				list_position = 0
+			
+			if list_position < max_display_items-1:
+				#update the cursor position
+				cursor_index -= 1
+			
+				if cursor_index < 0:
+					cursor_index = 0
+		
+		if changed:
+			UpdateItemList()
+			PositionCursor()
+			DescribeItem()
+		
 
 func PositionCursor():
 	cursor.global_position = items_container.rect_global_position + item_labels[cursor_index].rect_position + Vector2.LEFT*14 + Vector2.DOWN*7
@@ -93,5 +136,4 @@ func PositionCursor():
 		
 func DescribeItem():
 	description.text = ui_items[cursor_index].description
-		
-		
+

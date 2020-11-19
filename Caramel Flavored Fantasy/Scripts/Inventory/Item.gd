@@ -1,8 +1,8 @@
 #ITEM
 extends Node
 
-enum ItemType {WEAPON, ARMOR, USE, STORY}
-enum ItemClass {POTION,SWORD, SPEAR, BOW, DAGGER, AXE, LIGHT, HEAVY}
+enum ItemType {WEAPON, ARMOR, RING, USE, STORY}
+enum ItemClass {POTION,SWORD, SPEAR, BOW, DAGGER, AXE, LIGHT, HEAVY, MAGIC}
 enum EffectType {HEAL, CURE, REZ}
 
 var item_type = ItemType.USE
