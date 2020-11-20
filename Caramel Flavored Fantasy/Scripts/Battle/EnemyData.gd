@@ -3,6 +3,11 @@ extends Node
 
 enum EnemyType {OOZE,GOBLIN,DRAGON,ORC,GIANT,TROLL}
 
+var curHP = 1
+var maxHP = 1
+var curMP = 0
+var maxMP = 0
+
 var strength=16
 var dexterity=14
 var vitality=12

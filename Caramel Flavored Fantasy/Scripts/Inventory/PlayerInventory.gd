@@ -13,9 +13,8 @@ func _ready():
 	
 	AddItemByID(0,1)
 	AddItemByID(0)
-	AddItemByID(1)
-	AddItemByID(1)
-	AddItemByID(2)
+	AddItemByID(1,3)
+	AddItemByID(2,2)
 	AddItemByID(3)
 	AddItemByID(4)
 	AddItemByID(5)
@@ -30,7 +29,7 @@ func _ready():
 	
 	for key in items.keys():
 		var item = item_database.GetItemByID(key)
-		print(item.item_name, items[key])
+		#print(item.item_name, items[key])
 	
 	
 func GetItems():
@@ -53,5 +52,6 @@ func RemoveItemById(id, amount=1):
 	items[id] -= amount
 	
 	if items[id] < 1:
+		print("erase item")
 		items.erase(id)
 	

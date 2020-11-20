@@ -1,13 +1,22 @@
 # INVENTORY VIEW
 extends Panel
 
+enum ItemViewState {OPTIONS, SELECT_ITEM}
+var state = ItemViewState.OPTIONS
+
 var inventory_items = []
 onready var description = get_node("ItemDescription/DescriptionLbl")
 onready var items_container = get_node("ScrollContainer/ItemsContainer")
 onready var cursor = get_node("Cursor")
-var hero_select
+
+onready var useActionLbl = get_node("ItemHeader/UseActionLbl")
+
+onready var sortActionLbl = get_node("ItemHeader/SortActionLbl")
+
+var hero_select_view
 
 var item_label = preload("res://Scenes/HUD/ItemLabel.tscn")
+
 
 var item_labels = []
 
@@ -27,7 +36,7 @@ var inventory_length = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	hero_view = get_parent().get_node("HeroView")
-	hero_select = get_parent().get_node("HeroSelectView")
+	hero_select_view = get_parent().get_node("HeroSelectView")
 	timer = get_node("InputDelay")
 	
 	item_database = GameManager.GetItemDataBase()
@@ -84,50 +93,107 @@ func OnTimerTimeout():
 	timer.stop()
 
 func Activate():
-	cursor_index=0
-	PositionCursor()
+	ClearDescription()
+	cursor.global_position = useActionLbl.rect_global_position +Vector2.LEFT*14 + Vector2.DOWN*7
 	timer.start()
 	self.show()
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	# close the hero view
+	if active:
+		
+		match(state):
+			ItemViewState.OPTIONS:
+				Options()
+			ItemViewState.SELECT_ITEM:
+				SelectItem()
+
+				
+func Options():
+		# close the hero view
 	if active and Input.is_action_just_pressed("ui_cancel"):
 		hero_view.Activate()
 		hero_view.show()
 		active=false
 		self.hide()
 		
-	if active:
-		var changed = false
-		if Input.is_action_just_pressed("move_down"):
-			cursor_index += 1
-			changed = true
+	if Input.is_action_just_pressed("move_left"):
+		cursor_index-=1
+		if cursor_index<0:
+			cursor_index=0
 			
-			list_position += 1
-			if cursor_index > total_items-1:
-				cursor_index=total_items-1
-			if list_position > inventory_length-1:
-				list_position = inventory_length-1
+	elif Input.is_action_just_pressed("move_right"):
+		cursor_index+=1
+		if cursor_index>1:
+			cursor_index=1
+			
+	match(cursor_index):
+		0:
+			cursor.global_position = useActionLbl.rect_global_position +Vector2.LEFT*14 + Vector2.DOWN*7
+		1:
+			cursor.global_position = sortActionLbl.rect_global_position + Vector2.LEFT*14 + Vector2.DOWN*7
+	
+			
+	if Input.is_action_just_pressed("accept"):
 				
-		elif Input.is_action_just_pressed("move_up"):
-			changed = true
-			list_position -= 1
-			if list_position < 0:
-				list_position = 0
+		match(cursor_index):
+			0:
+				DescribeItem()
+				ChangeState(ItemViewState.SELECT_ITEM)
+				PositionCursor()
 			
-			if list_position < max_display_items-1:
-				#update the cursor position
-				cursor_index -= 1
-			
-				if cursor_index < 0:
-					cursor_index = 0
+func ChangeState(new_state):
+	cursor_index=0
+	state = new_state
+	
+func SelectItem():
+	if Input.is_action_just_pressed("ui_cancel"):
+		ChangeState(ItemViewState.OPTIONS)
+		ClearDescription()
+		return
 		
-		if changed:
-			UpdateItemList()
-			PositionCursor()
-			DescribeItem()
+	var changed = false
+	if Input.is_action_just_pressed("move_down"):
+		cursor_index += 1
+		changed = true
+		
+		list_position += 1
+		if cursor_index > total_items-1:
+			cursor_index=total_items-1
+		if list_position > inventory_length-1:
+			list_position = inventory_length-1
+			
+	elif Input.is_action_just_pressed("move_up"):
+		changed = true
+		list_position -= 1
+		if list_position < 0:
+			list_position = 0
+		
+		if list_position < max_display_items-1:
+			#update the cursor position
+			cursor_index -= 1
+		
+			if cursor_index < 0:
+				cursor_index = 0
+	
+	if changed:
+		UpdateItemList()
+		PositionCursor()
+		DescribeItem()
+		
+	if Input.is_action_just_pressed("accept"):
+		var item = ui_items[cursor_index]
+		if item.item_type == item.ItemType.USE:
+			hero_select_view.Setup(item.id)
+			hero_select_view.Activate()
+			Deactivate()
+
+func Deactivate():
+	active = false
+	self.hide()
+	
+func ClearDescription():
+	description.text = ""
 		
 
 func PositionCursor():

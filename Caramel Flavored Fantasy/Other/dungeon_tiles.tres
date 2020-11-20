@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=10 format=2]
+[gd_resource type="TileSet" load_steps=11 format=2]
 
 [ext_resource path="res://Graphics/Tilesets/tileset_basic.png" type="Texture" id=1]
 
@@ -17,13 +17,16 @@ extents = Vector2( 8, 8 )
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
-points = PoolVector2Array( -9, 8, -9, -8, 8, 8 )
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 8, 8 )
 
 [resource]
@@ -868,11 +871,18 @@ extents = Vector2( 8, 8 )
 47/tile_mode = 0
 47/occluder_offset = Vector2( 8, 8 )
 47/navigation_offset = Vector2( 8, 8 )
-47/shape_offset = Vector2( 0, 0 )
-47/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+47/shape_offset = Vector2( 8, 8 )
+47/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
+47/shape = SubResource( 8 )
 47/shape_one_way = false
-47/shape_one_way_margin = 0.0
-47/shapes = [  ]
+47/shape_one_way_margin = 1.0
+47/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
 47/z_index = 0
 48/name = "banner_top"
 48/texture = ExtResource( 1 )
@@ -912,14 +922,14 @@ extents = Vector2( 8, 8 )
 50/navigation_offset = Vector2( 8, 8 )
 50/shape_offset = Vector2( 8, 8 )
 50/shape_transform = Transform2D( 1, 0, 0, 1, 8, 8 )
-50/shape = SubResource( 8 )
+50/shape = SubResource( 9 )
 50/shape_one_way = false
 50/shape_one_way_margin = 1.0
 50/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 8 ),
+"shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
 } ]
 50/z_index = 0

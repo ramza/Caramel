@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/UI/ItemView.gd" type="Script" id=2]
@@ -6,11 +6,9 @@
 [ext_resource path="res://Other/Fonts/m3x6.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Graphics/HUD/menu-cursor.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/UI/HeroView.gd" type="Script" id=6]
-[ext_resource path="res://Graphics/Portraits/portraits.png" type="Texture" id=7]
 [ext_resource path="res://Graphics/Portraits/portraits_2.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/UI/HeroSelectView.gd" type="Script" id=9]
 [ext_resource path="res://Scripts/UI/EquipView.gd" type="Script" id=10]
-[ext_resource path="res://Other/Fonts/Minecraftia-Regular.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 4 )
@@ -22,8 +20,7 @@ font_data = ExtResource( 3 )
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 8
-font_data = ExtResource( 11 )
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 4 )
@@ -69,9 +66,9 @@ __meta__ = {
 
 [node name="EquipLbl" type="Label" parent="HeroView/HeroOptions"]
 margin_left = 1.0
-margin_top = 10.0
+margin_top = 11.0
 margin_right = 41.0
-margin_bottom = 24.0
+margin_bottom = 25.0
 custom_fonts/font = SubResource( 1 )
 text = "Equip"
 
@@ -167,9 +164,9 @@ __meta__ = {
 
 [node name="HeroPanel" type="Panel" parent="HeroView"]
 margin_left = 45.0
-margin_top = 46.0
+margin_top = 43.0
 margin_right = 270.0
-margin_bottom = 88.0
+margin_bottom = 85.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -187,6 +184,9 @@ margin_right = 74.0
 margin_bottom = 14.0
 custom_fonts/font = SubResource( 2 )
 text = "Sid"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HPLbl" type="Label" parent="HeroView/HeroPanel"]
 margin_left = 84.0
@@ -194,6 +194,9 @@ margin_right = 131.0
 margin_bottom = 14.0
 custom_fonts/font = SubResource( 2 )
 text = "HP: 17/17"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MPLbl" type="Label" parent="HeroView/HeroPanel"]
 margin_left = 84.0
@@ -219,37 +222,34 @@ custom_fonts/font = SubResource( 2 )
 text = "Lv: 1"
 
 [node name="HeroPanel2" type="Panel" parent="HeroView"]
-visible = false
 margin_left = 45.0
-margin_top = 124.0
+margin_top = 98.0
 margin_right = 270.0
-margin_bottom = 170.0
+margin_bottom = 140.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Sprite" type="Sprite" parent="HeroView/HeroPanel2"]
-position = Vector2( 1, 7 )
-texture = ExtResource( 7 )
+position = Vector2( 1, 21.5 )
+scale = Vector2( 1, 1.025 )
+texture = ExtResource( 8 )
 region_enabled = true
-region_rect = Rect2( 96, 96, 48, 48 )
+region_rect = Rect2( 40, 0, 40, 40 )
 
 [node name="NameLbl" type="Label" parent="HeroView/HeroPanel2"]
 margin_left = 34.0
-margin_right = 77.0
+margin_right = 74.0
 margin_bottom = 14.0
 custom_fonts/font = SubResource( 2 )
-text = "Rose"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "Sid"
 
 [node name="HPLbl" type="Label" parent="HeroView/HeroPanel2"]
 margin_left = 84.0
 margin_right = 131.0
 margin_bottom = 14.0
 custom_fonts/font = SubResource( 2 )
-text = "HP: 12/12"
+text = "HP: 17/17"
 
 [node name="MPLbl" type="Label" parent="HeroView/HeroPanel2"]
 margin_left = 84.0
@@ -257,10 +257,7 @@ margin_top = 14.0
 margin_right = 131.0
 margin_bottom = 28.0
 custom_fonts/font = SubResource( 2 )
-text = "MP: 5/5"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "MP: 0/0"
 
 [node name="StatusLbl" type="Label" parent="HeroView/HeroPanel2"]
 margin_left = 141.0
@@ -270,6 +267,59 @@ custom_fonts/font = SubResource( 2 )
 text = "Status: OK"
 
 [node name="LevelLbl" type="Label" parent="HeroView/HeroPanel2"]
+margin_left = 34.0
+margin_top = 14.0
+margin_right = 74.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 2 )
+text = "Lv: 1"
+
+[node name="HeroPanel3" type="Panel" parent="HeroView"]
+margin_left = 45.0
+margin_top = 154.0
+margin_right = 270.0
+margin_bottom = 196.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="HeroView/HeroPanel3"]
+position = Vector2( 1, 21.5 )
+scale = Vector2( 1, 1.025 )
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 80, 0, 40, 40 )
+
+[node name="NameLbl" type="Label" parent="HeroView/HeroPanel3"]
+margin_left = 34.0
+margin_right = 74.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "Sid"
+
+[node name="HPLbl" type="Label" parent="HeroView/HeroPanel3"]
+margin_left = 84.0
+margin_right = 131.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "HP: 17/17"
+
+[node name="MPLbl" type="Label" parent="HeroView/HeroPanel3"]
+margin_left = 84.0
+margin_top = 14.0
+margin_right = 131.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 2 )
+text = "MP: 0/0"
+
+[node name="StatusLbl" type="Label" parent="HeroView/HeroPanel3"]
+margin_left = 141.0
+margin_right = 194.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "Status: OK"
+
+[node name="LevelLbl" type="Label" parent="HeroView/HeroPanel3"]
 margin_left = 34.0
 margin_top = 14.0
 margin_right = 74.0
@@ -309,14 +359,28 @@ custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
 bbcode_text = "[color=#03fc94]Item[/color]"
 text = "Item"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="OrganizeLbl" type="Label" parent="ItemView/ItemHeader"]
-margin_left = 70.0
+[node name="UseActionLbl" type="Label" parent="ItemView/ItemHeader"]
+margin_left = 63.492
 margin_top = -2.0
-margin_right = 114.0
+margin_right = 107.492
 margin_bottom = 12.0
 custom_fonts/font = SubResource( 1 )
-text = "Organize"
+text = "Use"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SortActionLbl" type="Label" parent="ItemView/ItemHeader"]
+margin_left = 137.018
+margin_top = -2.0
+margin_right = 181.018
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 1 )
+text = "Sort"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -379,7 +443,7 @@ __meta__ = {
 [node name="infoPanel" type="Panel" parent="HeroSelectView"]
 margin_left = 14.0
 margin_top = 13.0
-margin_right = 79.0
+margin_right = 132.0
 margin_bottom = 38.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -391,12 +455,12 @@ margin_top = 6.0
 margin_right = 58.0
 margin_bottom = 28.0
 custom_fonts/font = SubResource( 4 )
-text = "Use Item"
+text = "Potion X 5"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HeroPanel" type="Panel" parent="HeroSelectView"]
+[node name="HeroPanel1" type="Panel" parent="HeroSelectView"]
 margin_left = 169.0
 margin_top = 36.0
 margin_right = 394.0
@@ -405,28 +469,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="HeroSelectView/HeroPanel"]
+[node name="Sprite" type="Sprite" parent="HeroSelectView/HeroPanel1"]
 position = Vector2( 1, 21.5 )
 scale = Vector2( 1, 1.025 )
 texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 40, 40 )
 
-[node name="NameLbl" type="Label" parent="HeroSelectView/HeroPanel"]
+[node name="NameLbl" type="Label" parent="HeroSelectView/HeroPanel1"]
 margin_left = 34.0
 margin_right = 74.0
 margin_bottom = 14.0
 custom_fonts/font = SubResource( 2 )
 text = "Sid"
 
-[node name="HPLbl" type="Label" parent="HeroSelectView/HeroPanel"]
+[node name="HPLbl" type="Label" parent="HeroSelectView/HeroPanel1"]
 margin_left = 84.0
 margin_right = 131.0
 margin_bottom = 14.0
 custom_fonts/font = SubResource( 2 )
 text = "HP: 17/17"
 
-[node name="MPLbl" type="Label" parent="HeroSelectView/HeroPanel"]
+[node name="MPLbl" type="Label" parent="HeroSelectView/HeroPanel1"]
 margin_left = 84.0
 margin_top = 14.0
 margin_right = 131.0
@@ -434,14 +498,120 @@ margin_bottom = 28.0
 custom_fonts/font = SubResource( 2 )
 text = "MP: 0/0"
 
-[node name="StatusLbl" type="Label" parent="HeroSelectView/HeroPanel"]
+[node name="StatusLbl" type="Label" parent="HeroSelectView/HeroPanel1"]
 margin_left = 141.0
 margin_right = 194.0
 margin_bottom = 14.0
 custom_fonts/font = SubResource( 2 )
 text = "Status: OK"
 
-[node name="LevelLbl" type="Label" parent="HeroSelectView/HeroPanel"]
+[node name="LevelLbl" type="Label" parent="HeroSelectView/HeroPanel1"]
+margin_left = 34.0
+margin_top = 14.0
+margin_right = 74.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 2 )
+text = "Lv: 1"
+
+[node name="HeroPanel2" type="Panel" parent="HeroSelectView"]
+margin_left = 169.0
+margin_top = 98.2254
+margin_right = 394.0
+margin_bottom = 139.225
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="HeroSelectView/HeroPanel2"]
+position = Vector2( 1, 21.5 )
+scale = Vector2( 1, 1.025 )
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 40, 40 )
+
+[node name="NameLbl" type="Label" parent="HeroSelectView/HeroPanel2"]
+margin_left = 34.0
+margin_right = 74.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "Sid"
+
+[node name="HPLbl" type="Label" parent="HeroSelectView/HeroPanel2"]
+margin_left = 84.0
+margin_right = 131.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "HP: 17/17"
+
+[node name="MPLbl" type="Label" parent="HeroSelectView/HeroPanel2"]
+margin_left = 84.0
+margin_top = 14.0
+margin_right = 131.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 2 )
+text = "MP: 0/0"
+
+[node name="StatusLbl" type="Label" parent="HeroSelectView/HeroPanel2"]
+margin_left = 141.0
+margin_right = 194.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "Status: OK"
+
+[node name="LevelLbl" type="Label" parent="HeroSelectView/HeroPanel2"]
+margin_left = 34.0
+margin_top = 14.0
+margin_right = 74.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 2 )
+text = "Lv: 1"
+
+[node name="HeroPanel3" type="Panel" parent="HeroSelectView"]
+margin_left = 169.0
+margin_top = 157.622
+margin_right = 394.0
+margin_bottom = 198.622
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="HeroSelectView/HeroPanel3"]
+position = Vector2( 1, 21.5 )
+scale = Vector2( 1, 1.025 )
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 40, 40 )
+
+[node name="NameLbl" type="Label" parent="HeroSelectView/HeroPanel3"]
+margin_left = 34.0
+margin_right = 74.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "Sid"
+
+[node name="HPLbl" type="Label" parent="HeroSelectView/HeroPanel3"]
+margin_left = 84.0
+margin_right = 131.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "HP: 17/17"
+
+[node name="MPLbl" type="Label" parent="HeroSelectView/HeroPanel3"]
+margin_left = 84.0
+margin_top = 14.0
+margin_right = 131.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 2 )
+text = "MP: 0/0"
+
+[node name="StatusLbl" type="Label" parent="HeroSelectView/HeroPanel3"]
+margin_left = 141.0
+margin_right = 194.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "Status: OK"
+
+[node name="LevelLbl" type="Label" parent="HeroSelectView/HeroPanel3"]
 margin_left = 34.0
 margin_top = 14.0
 margin_right = 74.0
@@ -498,23 +668,12 @@ __meta__ = {
 }
 
 [node name="RemoveActionLbl" type="Label" parent="EquipView/EquipHeader"]
-margin_left = 63.492
+margin_left = 50.8969
 margin_top = -2.0
-margin_right = 107.492
+margin_right = 94.8969
 margin_bottom = 12.0
 custom_fonts/font = SubResource( 1 )
 text = "Remove"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="SortActionLbl" type="Label" parent="EquipView/EquipHeader"]
-margin_left = 129.0
-margin_top = -2.0
-margin_right = 173.0
-margin_bottom = 12.0
-custom_fonts/font = SubResource( 1 )
-text = "Sort"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -592,7 +751,9 @@ margin_top = 2.0
 margin_right = 131.0
 margin_bottom = 122.0
 custom_fonts/normal_font = SubResource( 6 )
+custom_constants/line_separation = -3
 text = "Strength: 10
+Dexterity: 10
 "
 __meta__ = {
 "_edit_use_anchors_": false
@@ -604,6 +765,9 @@ margin_top = 2.0
 margin_right = 143.0
 margin_bottom = 122.0
 custom_fonts/normal_font = SubResource( 6 )
+custom_constants/line_separation = -3
+text = "0
+0"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -1,12 +1,12 @@
 #ITEM
 extends Node
 
-enum ItemType {WEAPON, ARMOR, RING, USE, STORY}
+enum ItemType {WEAPON, ARMOR, RING, USE, STORY,EMPTY}
 enum ItemClass {POTION,SWORD, SPEAR, BOW, DAGGER, AXE, LIGHT, HEAVY, MAGIC}
 enum EffectType {HEAL, CURE, REZ}
 
 var item_type = ItemType.USE
-var effectType = EffectType.CURE
+var effect_type = EffectType.CURE
 var item_class = ItemClass.POTION
 
 var item_name = "Potion of Healing"

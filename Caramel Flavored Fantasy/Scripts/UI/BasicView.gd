@@ -14,8 +14,13 @@ func _ready():
 
 	
 func Activate():
+	#start the timer so that the player doesn't immediately back out of the menu
 	timer.start()
 	self.show()
+	
+func Deactivate():
+	self.hide()
+	active = false
 	
 	
 func OnTimerTimeout():

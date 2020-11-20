@@ -1,15 +1,30 @@
+# NPC
 extends KinematicBody2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+enum NPCState {IDLE,WALK}
+
+var state = NPCState.IDLE
+
+enum Direction {LEFT,RIGHT,UP,DOWN}
+var direction = Direction.DOWN
+
+var timer = 0.0
+
+var idle_time = 2.0
+var walk_time = 2.0
+
+var speed = 10
 
 var story
 var player
 var player_present = false
 
+var velocity = Vector2.ZERO
+
 var talking = false
+
+export var move = false
 
 onready var anim = get_node("AnimationPlayer")
 
@@ -17,7 +32,6 @@ export var dialogues = [
 	"This is the first line of dialogue. It's just some filler text.",
 	"Even more dialouge will make the story detailed and immersive.",
 ]
-
 
 onready var activation_area = get_node("ActivationArea")
 # Called when the node enters the scene tree for the first time.
@@ -61,10 +75,29 @@ func FacePlayer():
 		else:
 			anim.play("idle_up")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if not talking and player_present and Input.is_action_just_pressed("accept"):
 		talking = true
 		FacePlayer()
 		story.StartStory(self)
 		player.Freeze()
+		
+		
+	elif not talking:
+		match(state):
+			NPCState.IDLE:
+				Idle(delta)
+			NPCState.WALK:
+				Walk(delta)
+
+func Idle(delta):
+	timer += delta
+	
+	if timer > idle_time:
+		ChangeState(NPCState.WALK)
+	
+func Walk(delta):
+	timer += delta
+	
+func ChangeState(new_state):
+	state = new_state

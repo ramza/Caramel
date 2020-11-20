@@ -25,5 +25,16 @@ func BuildDatabase():
 	enemies.append(slime)
 	
 	
+func GetEnemyByID(id):
+	for enemy in enemies:
+		if enemy.id == id:
+			return enemy
+			
+func GetEnemyByName(name):
+	for enemy in enemies:
+		if enemy.enemy_name == name:
+			return enemy
+
+	
 	
 	

@@ -9,6 +9,11 @@ var heroes = []
 func AddSid():
 	var sid = hero_data.instance()
 
+	sid.curHP = 4
+	sid.maxHP = 122
+	sid.curMP = 5
+	sid.maxMP = 5
+
 	sid.strength=16
 	sid.dexterity=14
 	sid.vitality=12
@@ -29,6 +34,11 @@ func AddSid():
 func AddStar():
 	var star = hero_data.instance()
 	
+	star.curHP = 18
+	star.maxHP = 18
+	star.curMP = 7
+	star.maxMP = 7
+
 	star.strength=16
 	star.dexterity=14
 	star.vitality=12

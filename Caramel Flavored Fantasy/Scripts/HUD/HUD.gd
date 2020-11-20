@@ -9,7 +9,7 @@ onready var equip_view = get_node("EquipView")
 onready var hero_select_view = get_node("HeroSelectView")
 var paused = false
 var player
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	player = get_tree().get_nodes_in_group("Player")[0]
 	HideAllViews()
@@ -17,9 +17,8 @@ func _ready():
 func _process(delta):
 	if not paused and Input.is_action_just_pressed("ui_cancel"):
 		paused=true
-		
 		OpenPlayerMenu()
-			
+
 func OpenPlayerMenu():
 	hero_view.show()
 	hero_view.Activate()
@@ -36,5 +35,4 @@ func HideAllViews():
 	item_view.hide()
 	hero_select_view.hide()
 	equip_view.hide()
-	
-		
+

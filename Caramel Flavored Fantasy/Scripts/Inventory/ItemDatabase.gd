@@ -1,3 +1,4 @@
+# ITEM DATABASE
 extends Node
 
 
@@ -77,6 +78,7 @@ func BuildDatabase():
 	var revive = item.instance()
 	revive.item_name = "Revive"
 	revive.id = 6
+	revive.effect_type = revive.EffectType.REZ
 	revive.item_type = revive.ItemType.USE
 	revive.item_class = revive.ItemClass.POTION
 	revive.description = "Use this to brink back a fallen comrade."
@@ -94,7 +96,13 @@ func BuildDatabase():
 	silver_ring.description = "Adds '+1' to dexterity."
 	silver_ring.attributes = {
 		"value":100,
+		"strength_bonus":0,
 		"dexterity_bonus":1,
+		"vitality_bonus":0,
+		"intelligence_bonus":0,
+		"charm_bonus":0,
+		"spirit_bonus":0,
+		"magic_bonus":0,
 	}
 	items.append(silver_ring)
 	
@@ -107,6 +115,12 @@ func BuildDatabase():
 	gold_ring.attributes = {
 		"value":100,
 		"strength_bonus":1,
+		"dexterity_bonus":0,
+		"vitality_bonus":0,
+		"intelligence_bonus":0,
+		"charm_bonus":0,
+		"spirit_bonus":0,
+		"magic_bonus":0,
 	}
 	items.append(gold_ring)
 	
@@ -118,7 +132,13 @@ func BuildDatabase():
 	ruby_ring.description = "Adds '+1' to vitality."
 	ruby_ring.attributes = {
 		"value":100,
+		"strength_bonus":1,
+		"dexterity_bonus":0,
 		"vitality_bonus":1,
+		"intelligence_bonus":0,
+		"charm_bonus":0,
+		"spirit_bonus":0,
+		"magic_bonus":0,
 	}
 	items.append(ruby_ring)
 	
@@ -130,11 +150,16 @@ func BuildDatabase():
 	emerald_ring.description = "Adds '+1' to Intelligence."
 	emerald_ring.attributes = {
 		"value":100,
+		"strength_bonus":0,
+		"dexterity_bonus":0,
+		"vitality_bonus":0,
 		"intelligence_bonus":1,
+		"charm_bonus":0,
+		"spirit_bonus":0,
+		"magic_bonus":0,
 	}
 	items.append(emerald_ring)
 	
-		
 	var iron_dagger = item.instance()
 	iron_dagger.item_name = "Iron Dagger"
 	iron_dagger.id = 11
@@ -155,29 +180,68 @@ func BuildDatabase():
 	gold_armor.description = "Offers superior projection."
 	gold_armor.attributes = {
 		"value":160,
-		"damage_bonus":6,
+		"armor_bonus":6,
 	}
 	items.append(gold_armor)
 	
-	var ring_of_health = item.instance()
-	ring_of_health.item_name = "Ring of Health"
-	ring_of_health.id = 13
-	ring_of_health.item_type = ring_of_health.ItemType.RING
-	ring_of_health.item_class = ring_of_health.ItemClass.MAGIC
-	ring_of_health.description = "Grants the wearer extra health."
-	ring_of_health.attributes = {
-		"value":300,
-		"hp_bonus":10,
+	var topaz_ring = item.instance()
+	topaz_ring.item_name = "Topaz Ring"
+	topaz_ring.id = 13
+	topaz_ring.item_type = topaz_ring.ItemType.RING
+	topaz_ring.item_class = topaz_ring.ItemClass.MAGIC
+	topaz_ring.description = "Adds '+1' to Sprit."
+	topaz_ring.attributes = {
+		"value":100,
+		"strength_bonus":0,
+		"dexterity_bonus":0,
+		"vitality_bonus":0,
+		"intelligence_bonus":0,
+		"charm_bonus":0,
+		"spirit_bonus":1,
+		"magic_bonus":0,
 	}
-	items.append(ring_of_health)
+	items.append(topaz_ring)
+	
+	var mythril_sword = item.instance()
+	mythril_sword.item_name = "Mythril Sword"
+	mythril_sword.id = 14
+	mythril_sword.item_type = mythril_sword.ItemType.WEAPON
+	mythril_sword.item_class = mythril_sword.ItemClass.SWORD
+	mythril_sword.description = "A true champion's blade."
+	mythril_sword.attributes = {
+		"value":100,
+		"damage_bonus":15,
+	}
+	items.append(mythril_sword)
+	
+	var steel_armor = item.instance()
+	steel_armor.item_name = "Steel Armor"
+	steel_armor.id = 15
+	steel_armor.item_type = steel_armor.ItemType.ARMOR
+	steel_armor.item_class = steel_armor.ItemClass.HEAVY
+	steel_armor.description = "A castle-forged breastplate worthy of a knight."
+	steel_armor.attributes = {
+		"armor_bonus":10,
+		"value":250,
+	}
+	items.append(steel_armor)
 	
 	var empty_equipment_slot = item.instance()
 	empty_equipment_slot.item_name = "Empty"
 	empty_equipment_slot.id = 99
-	empty_equipment_slot.item_type = empty_equipment_slot.ItemType.STORY
+	empty_equipment_slot.item_type = empty_equipment_slot.ItemType.EMPTY
 	empty_equipment_slot.description = "There is nothing here."
 	empty_equipment_slot.attributes = {
 		"value":0,
+		"armor_bonus":0,
+		"damage_bonus":0,
+		"dexterity_bonus":0,
+		"strength_bonus":0,
+		"vitality_bonus":0,
+		"charm_bonus":0,
+		"intelligence_bonus":0,
+		"spirit_bonus":0,
+		"magic_bonus":0,
 	}
 	items.append(empty_equipment_slot)
 	
