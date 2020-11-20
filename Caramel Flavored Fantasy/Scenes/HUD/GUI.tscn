@@ -100,6 +100,7 @@ tracks/0/keys = {
 script = ExtResource( 3 )
 
 [node name="Curtain" type="Sprite" parent="."]
+visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 190, 110 )
 scale = Vector2( 8.77083, 5.51042 )

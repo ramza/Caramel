@@ -82,12 +82,12 @@ func DisplayHeroEquipment(id):
 	stats += str(hero.intelligence + ring.attributes["intelligence_bonus"]) + "\n"
 	stats += str(hero.spirit + ring.attributes["spirit_bonus"]) + "\n"
 	stats += str(hero.charm + ring.attributes["charm_bonus"]) +"\n"
-	stats += str(weapon.attributes["damage_bonus"] + hero.strength + ring.attributes["strength_bonus"]-10) + "\n"
+	stats += str(hero.strength-10) + " + [color=#03fc94]" + str(weapon.attributes["damage_bonus"]) + "[/color] + [color=#03fc94]" + str(ring.attributes["strength_bonus"]) + "[/color]\n"
 	stats += str(10 + armor.attributes["armor_bonus"] + hero.dexterity + ring.attributes["dexterity_bonus"]-10) + "\n"
 	stats += str((hero.intelligence-10)/2 + hero.magic + ring.attributes["magic_bonus"]) + "\n"
 	stats += str((hero.intelligence-10)/2 + hero.magic) + str(ring.attributes["magic_bonus"]) + "\n"
 	
-	statsLbl.text = stats
+	statsLbl.bbcode_text = stats
 	
 func _process(delta):
 	# close the hero view

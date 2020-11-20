@@ -20,4 +20,7 @@ func FadeIn():
 
 func Drop():
 	anim.play("drop")
+	
+func Rise():
+	anim.play("rise")
 

@@ -1,5 +1,7 @@
 # ENEMY DATA
-extends Node
+extends "BattleUnit.gd"
+
+
 
 enum EnemyType {OOZE,GOBLIN,DRAGON,ORC,GIANT,TROLL}
 

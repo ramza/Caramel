@@ -27,7 +27,7 @@ func AddSid():
 	sid.weapon_id = 1
 	sid.armor_id = 2
 	sid.ring_id = 99
-	
+	sid.unit_type = sid.UnitType.PLAYER
 	add_child(sid)
 	heroes.append(sid)
 	
@@ -48,6 +48,8 @@ func AddStar():
 	
 	star.hero_name = "Star"
 	star.character_class = "Rogue"
+
+	star.unit_type = star.UnitType.PLAYER
 
 	star.weapon_id = 1
 	star.armor_id = 2

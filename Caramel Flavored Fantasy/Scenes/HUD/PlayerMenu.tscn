@@ -11,9 +11,11 @@
 [ext_resource path="res://Scripts/UI/EquipView.gd" type="Script" id=10]
 
 [sub_resource type="DynamicFont" id=1]
+size = 12
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 12
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -26,6 +28,7 @@ font_data = ExtResource( 4 )
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=6]
+size = 14
 font_data = ExtResource( 4 )
 
 [node name="PlayerMenu" type="CanvasLayer" groups=[
@@ -766,11 +769,9 @@ margin_right = 143.0
 margin_bottom = 122.0
 custom_fonts/normal_font = SubResource( 6 )
 custom_constants/line_separation = -3
-text = "0
-0"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+bbcode_enabled = true
+bbcode_text = "[color=#03fc94]0[/color]"
+text = "0"
 
 [node name="Cursor" type="Sprite" parent="EquipView"]
 position = Vector2( 79, 18.8615 )

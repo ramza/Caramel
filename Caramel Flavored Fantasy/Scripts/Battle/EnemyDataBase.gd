@@ -24,6 +24,23 @@ func BuildDatabase():
 	]
 	enemies.append(slime)
 	
+
+func CopyEnemy(name):
+	var e = GetEnemyByName(name)
+	var enemy = enemy_data.instance()
+	enemy.strength = e.strength
+	enemy.dexterity = e.dexterity
+	enemy.vitality = e.vitality
+	enemy.intelligence = e.intelligence
+	enemy.spirit = e.spirit
+	enemy.charm = e.charm
+	
+	enemy.enemy_name = e.enemy_name
+	enemy.enemy_type = e.enemy_type
+	enemy.critical_strike_chance = e.critical_strike_chance
+	enemy.attack_descriptions = e.attack_descriptions	
+	
+	return enemy
 	
 func GetEnemyByID(id):
 	for enemy in enemies:

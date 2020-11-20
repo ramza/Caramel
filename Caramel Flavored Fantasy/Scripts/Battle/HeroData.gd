@@ -1,5 +1,5 @@
 # HERO DATA
-extends Node
+extends "BattleUnit.gd"
 
 # BASIC STATS FOR THE PLAYER HEROES
 

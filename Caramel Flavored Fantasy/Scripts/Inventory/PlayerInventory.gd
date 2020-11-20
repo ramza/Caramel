@@ -52,6 +52,6 @@ func RemoveItemById(id, amount=1):
 	items[id] -= amount
 	
 	if items[id] < 1:
-		print("erase item")
+		#print("erase item")
 		items.erase(id)
 	

@@ -5,7 +5,7 @@ var item_database
 var inventory
 var hero_party
 
-var enemy_list = ["Slime"]
+var enemy_list = ["Slime","Slime","Slime"]
 
 var spawn_point = "Main"
 # Called when the node enters the scene tree for the first time.
