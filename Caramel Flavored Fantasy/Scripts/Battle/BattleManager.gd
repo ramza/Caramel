@@ -10,6 +10,8 @@ var battle_index = 0
 
 var battle_order = []
 
+onready var camera = get_parent().get_node("CustomeCamera2D")
+
 onready var battle_ui = get_parent().get_node("BattleUI")
 onready var battle_timer = get_node("BattleTimer")
 # Called when the node enters the scene tree for the first time.
@@ -59,22 +61,54 @@ func BattleIntro():
 	battle_ui.NewBattleMSG(msg)
 	
 	battle_timer.start()
-		
+	
+func IsVictory():
+	var dead_enemies = 0
+	
+	for e in enemies:
+		if e.curHP < 1:
+			dead_enemies += 1
+			
+	return dead_enemies == len(enemies)
+
+func IsDefeat():
+	var dead_heroes = 0
+	
+	for h in heroes:
+		if h.curHP < 1:
+			dead_heroes += 1
+	
+	return dead_heroes == len(heroes)
 
 func OnBattleTimerTimeout():
 	battle_timer.stop()
 	TakeNextTurn()
 	
+func WonBattle():
+	battle_ui.NewBattleMSG("Victory! You defeated the enemy.")
+	
+func LostBattle():
+	battle_ui.NewBattleMSG("You were defeated.")
+	
 func TakeNextTurn():
+	
+	if IsVictory():
+		WonBattle()
+		return
+	elif IsDefeat():
+		LostBattle()
+		return
+	
 	var unit = battle_order[battle_index]
 	battle_index += 1
-	print("take next turn")
+	if battle_index > len(battle_order)-1:
+		battle_index = 0
+	
+	#print("take next turn")
 	if unit.curHP <= 0:
 		TakeNextTurn()
 		return
 		
-	
-
 	print(battle_index)
 	if unit.unit_type == unit.UnitType.PLAYER:
 		PlayerTurn(unit)
@@ -82,7 +116,10 @@ func TakeNextTurn():
 		EnemyTurn(unit)
 
 func EnemyTurn(unit):
-	pass
+	
+	for e in enemy_party.enemy_nodes:
+		if e.enemy == unit:
+			e.TakeTurn()
 
 func PlayerTurn(unit):
 	battle_ui.StartActionPanel(unit.hero_name)

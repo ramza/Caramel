@@ -27,6 +27,7 @@ func OnTimerTimeout():
 func OnAreaBodyEntered(body):
 	if body.is_in_group("Player"):
 		body.Freeze()
+		GameManager.facing_direction = body.direction
 		timer.start()
 		GUI.Transition()
 

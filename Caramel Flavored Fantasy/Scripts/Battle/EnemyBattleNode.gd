@@ -9,16 +9,21 @@ onready var timer = get_node("Timer")
 onready var FadeTimer = get_node("FadeTimer")
 var max_flash = 5
 var flash_count = 0
-const FADE_AMOUNT = 0.05
+const FADE_AMOUNT = 0.1
 var flashing = false
 var shader = preload("res://Other/Shaders/InvertedColor.tres")
+
+var white_shader = preload("res://Other/Shaders/WhiteSilouette.tres")
 
 var sprite_alpha = 1
 
 var battle_manager
 
+onready var enemyAI = get_node("EnemyAI")
+onready var endTurnTimer = get_node("EndTurnTimer")
 func _ready():
 	battle_manager = get_tree().get_nodes_in_group("BattleManager")[0]
+	enemyAI.battle_manager = battle_manager
 
 func Select():
 	sprite.material=shader
@@ -32,10 +37,11 @@ func Flash():
 	Deselect()
 	timer.start()
 	
+func TakeTurn():
+	enemyAI.Battle(enemy)
+	
 func KillMonster():
-	print("kill monster")
 	Deselect()
-	sprite.modulate = Color.red
 	FadeTimer.start()
 
 func _on_Timer_timeout():
@@ -44,19 +50,21 @@ func _on_Timer_timeout():
 	if flash_count > max_flash:
 		if enemy.curHP<=0:
 			KillMonster()
+		else:
+			endTurnTimer.start()
 		
 		timer.stop()
-		sprite.modulate = Color.white
+		sprite.material = null
 		return
 	
 	if flashing:
 		flashing=false
-		sprite.modulate = Color.red
+		sprite.material = white_shader
 
 	else:
 
 		flashing=true
-		sprite.modulate = Color.white
+		sprite.material = null
 
 
 func _on_FadeTimer_timeout():
@@ -68,3 +76,7 @@ func _on_FadeTimer_timeout():
 		battle_manager.TakeNextTurn()
 		
 
+func _on_EndTurnTimer_timeout():
+	endTurnTimer.stop()
+	battle_manager.TakeNextTurn()
+	

@@ -5,6 +5,7 @@ var positions = []
 var cursor_index = 0
 var item_view
 var equip_view
+var status_view
 
 onready var cursor = get_node("HeroOptions/Cursor")
 
@@ -23,6 +24,8 @@ func _ready():
 	
 	item_view = get_parent().get_node("ItemView")
 	equip_view = get_parent().get_node("EquipView")
+	status_view = get_parent().get_node("StatusView")
+	
 	
 	positions = $HeroOptions.get_children()
 	positions.remove(len(positions)-1)
@@ -38,6 +41,10 @@ func Activate():
 	timer.start()
 	UpdateHeroInfo()
 	self.show()
+	
+func Deactivate():
+	active=false
+	self.hide()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -58,12 +65,16 @@ func _process(delta):
 	if Input.is_action_just_pressed("accept"):
 		if cursor_index == 0:
 			item_view.Activate()
-			active=false
-			self.hide()
+			Deactivate()
+			return
 		elif cursor_index == 1:
 			equip_view.Activate()
-			active = false
-			self.hide()
+			Deactivate()
+			return
+		elif cursor_index == 3:
+			status_view.Activate()
+			Deactivate()
+			return
 			
 	elif Input.is_action_just_pressed("ui_cancel"):
 		#print("quit hero view menu")

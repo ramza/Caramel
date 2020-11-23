@@ -47,11 +47,11 @@ func AddItemByID(id,amount=1):
 		item_key_order.append(id)
 		
 func RemoveItemById(id, amount=1):
-	var item = item_database.GetItemByID(id)
-	
 	items[id] -= amount
 	
 	if items[id] < 1:
 		#print("erase item")
 		items.erase(id)
+		item_key_order.erase(id)
+		
 	

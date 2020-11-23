@@ -1,9 +1,6 @@
+# HERO ATTACK
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var hero
 var enemy
 onready var timer = get_node("Timer")

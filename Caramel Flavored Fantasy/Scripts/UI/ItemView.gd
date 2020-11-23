@@ -65,6 +65,11 @@ func _ready():
 	PositionCursor()
 	DescribeItem()
 	
+func ClearItemList():
+	for i in range(max_display_items):
+		item_labels[i].text = ""
+		item_labels[i].hide()
+	
 func UpdateItemList():
 	var list_min = 0
 	var list_max = max_display_items
@@ -74,9 +79,7 @@ func UpdateItemList():
 		list_min = list_position-9
 		list_max = list_position+1
 		
-	for j in range(max_display_items):
-		item_labels[j].text = ""
-		item_labels[j].hide()
+	ClearItemList()
 	
 	var j = 0
 	
@@ -94,8 +97,13 @@ func OnTimerTimeout():
 
 func Activate():
 	ClearDescription()
+	ClearItemList()
 	cursor.global_position = useActionLbl.rect_global_position +Vector2.LEFT*14 + Vector2.DOWN*7
 	timer.start()
+	state = ItemViewState.OPTIONS
+	cursor_index=0
+	items = player_inventory.GetItems()
+	inventory_length = len(items)
 	self.show()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -138,6 +146,7 @@ func Options():
 				
 		match(cursor_index):
 			0:
+				UpdateItemList()
 				DescribeItem()
 				ChangeState(ItemViewState.SELECT_ITEM)
 				PositionCursor()

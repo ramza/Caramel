@@ -55,7 +55,6 @@ func _process(delta):
 		# close the hero view
 	if active and Input.is_action_just_pressed("ui_cancel"):
 		item_view.Activate()
-		item_view.show()
 		active=false
 		self.hide()
 	
@@ -78,10 +77,12 @@ func _process(delta):
 			
 			match(current_item.effect_type):
 				current_item.EffectType.CURE:
+					print("cure player")
 					if heroes[cursor_index].curHP < heroes[cursor_index].maxHP:	
 						heroes[cursor_index].curHP += current_item.attributes["hp_bonus"]
 						player_inventory.RemoveItemById(current_item.id)
 				current_item.EffectType.REZ:
+					print("revive player")
 					if heroes[cursor_index].curHP == 0:
 						heroes[cursor_index].curHP += current_item.attributes["hp_bonus"]
 						player_inventory.RemoveItemById(current_item.id)
@@ -90,9 +91,8 @@ func _process(delta):
 						heroes[cursor_index].status = "OK"
 						player_inventory.RemoveItemById(current_item.id)
 			
-			player_inventory.RemoveItemById(current_item.id)
-			UpdateItemDisplay()
 			
+			UpdateItemDisplay()
 			UpdateHeroInfo()
 		
 func UpdateHeroInfo():
@@ -104,7 +104,13 @@ func UpdateHeroInfo():
 		hero_panels[i].get_node("HPLbl").text = "HP: " + str(hero.curHP) + "/" + str(hero.maxHP)
 		hero_panels[i].get_node("MPLbl").text = "MP: " + str(hero.curMP) + "/" + str(hero.maxMP)
 		hero_panels[i].get_node("LevelLbl").text = "Lv: " + str(hero.level)
-		hero_panels[i].get_node("StatusLbl").text = "Status: " + hero.status
+		
+		var hero_status = ""
+		match(hero.status):
+			hero.HeroStatus.OK:
+				hero_status = "OK"
+		
+		hero_panels[i].get_node("StatusLbl").text = "Status: " + hero_status
 		PaintPortrait(hero.hero_name,hero_panels[i].get_node("Sprite"))
 		hero_panels[i].show()
 		i+=1

@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Other/Fonts/m3x6.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Graphics/HUD/menu-cursor.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/HUD/StoryLayerControl.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+extra_spacing_char = 1
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "blink"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "hide"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="StoryLayer" type="CanvasLayer" groups=[
+"Story",
+]]
+script = ExtResource( 3 )
+
+[node name="StoryPanel" type="Panel" parent="."]
+visible = false
+self_modulate = Color( 0.490196, 0.831373, 1, 1 )
+margin_left = 97.0
+margin_top = 9.0
+margin_right = 296.0
+margin_bottom = 66.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="StoryPanel"]
+margin_right = 199.0
+margin_bottom = 57.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="StoryPanel/TextureRect"]
+margin_left = 6.0
+margin_top = 3.0
+margin_right = 192.0
+margin_bottom = 54.0
+custom_fonts/normal_font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cursor" type="TextureRect" parent="StoryPanel/TextureRect"]
+margin_left = 197.0
+margin_top = 47.0
+margin_right = 209.0
+margin_bottom = 59.0
+rect_rotation = 90.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StoryPanel/TextureRect/Cursor"]
+autoplay = "blink"
+anims/blink = SubResource( 2 )
+anims/hide = SubResource( 3 )

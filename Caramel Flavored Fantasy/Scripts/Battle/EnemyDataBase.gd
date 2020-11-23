@@ -8,12 +8,19 @@ var enemies = []
 func BuildDatabase():
 	
 	var slime = enemy_data.instance()
-	slime.strength=9
+	slime.curHP = 12
+	slime.maxHP = 12
+	slime.curMP = 0
+	slime.maxMP = 0
+	slime.strength=15
 	slime.dexterity=7
 	slime.vitality=7
 	slime.intelligence=2
 	slime.spirit=4
 	slime.charm=2
+	
+	slime.attack = 2
+	slime.defense = 3
 	
 	slime.enemy_name = "Slime"
 	slime.enemy_type = slime.EnemyType.OOZE
@@ -34,6 +41,12 @@ func CopyEnemy(name):
 	enemy.intelligence = e.intelligence
 	enemy.spirit = e.spirit
 	enemy.charm = e.charm
+	enemy.curHP = e.curHP
+	enemy.maxHP = e.maxHP
+	enemy.curMP = e.curMP
+	enemy.maxMP = e.curMP
+	enemy.attack = e.attack
+	enemy.defense = e.defense
 	
 	enemy.enemy_name = e.enemy_name
 	enemy.enemy_type = e.enemy_type

@@ -6,7 +6,7 @@ var inventory
 var hero_party
 
 var enemy_list = ["Slime","Slime","Slime"]
-
+var facing_direction
 var spawn_point = "Main"
 # Called when the node enters the scene tree for the first time.
 func _ready():

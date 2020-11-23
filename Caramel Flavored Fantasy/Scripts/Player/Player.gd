@@ -17,6 +17,9 @@ func Freeze():
 func Release():
 	frozen = false
 	
+func _ready():
+	direction =GameManager.facing_direction
+	
 func _physics_process(_delta):
 
 	var up = Input.is_action_pressed("move_up")

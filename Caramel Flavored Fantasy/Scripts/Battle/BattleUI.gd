@@ -47,8 +47,8 @@ func UpdateHeroInfo():
 		hero_panels[i].get_node("NameLbl").text = heroes[i].hero_name
 		
 		var stats = ""
-		stats += "HP: " + str(heroes[i].curHP) + "/" + str(heroes[i].curHP) + "\n"
-		stats += "MP " + str(heroes[i].curMP) + "/" + str(heroes[i].curMP)
+		stats += "HP: " + str(heroes[i].curHP) + "/" + str(heroes[i].maxHP) + "\n"
+		stats += "MP " + str(heroes[i].curMP) + "/" + str(heroes[i].maxMP)
 		hero_panels[i].get_node("StatsLbl").text = stats
 	
 

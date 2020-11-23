@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Audio/Music/Cecil.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Scripts/Game/GameManager.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Game/HeroParty.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Magic/MagicDatabase.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Inventory/ItemDatabase.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/Inventory/PlayerInventory.gd" type="Script" id=6]
 
@@ -12,6 +13,7 @@ script = ExtResource( 2 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 volume_db = 0.5
+autoplay = true
 
 [node name="HeroParty" type="Node" parent="."]
 script = ExtResource( 3 )
@@ -23,3 +25,6 @@ script = ExtResource( 5 )
 "PlayerInventory",
 ]]
 script = ExtResource( 6 )
+
+[node name="SpellDatabase" type="Node" parent="."]
+script = ExtResource( 4 )

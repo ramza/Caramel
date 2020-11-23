@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Battle/BattleManager.gd" type="Script" id=1]
 [ext_resource path="res://Other/Fonts/m3x6.ttf" type="DynamicFontData" id=2]
@@ -10,16 +10,16 @@
 [ext_resource path="res://Scripts/Battle/EnemyParty.gd" type="Script" id=8]
 [ext_resource path="res://Scenes/HUD/GUI.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scripts/Battle/EnemySelector.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/Battle/CameraShake.gd" type="Script" id=11]
 
 [sub_resource type="DynamicFont" id=1]
-size = 12
 extra_spacing_char = 1
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 8
 font_data = ExtResource( 4 )
 
@@ -33,6 +33,7 @@ font_data = ExtResource( 2 )
 layer = 2
 
 [node name="BattleUI" type="CanvasLayer" parent="."]
+follow_viewport_enable = true
 script = ExtResource( 6 )
 
 [node name="BattleContainer" type="Panel" parent="BattleUI"]
@@ -100,7 +101,7 @@ margin_left = 4.0
 margin_top = -13.0
 margin_right = 32.0
 margin_bottom = 1.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "Hero"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -111,7 +112,7 @@ margin_left = 4.0
 margin_top = 5.0
 margin_right = 32.0
 margin_bottom = 19.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Fight"
 
 [node name="MagicLbl" type="Label" parent="BattleUI/BattleContainer/ActionPanel"]
@@ -119,7 +120,7 @@ margin_left = 4.0
 margin_top = 19.0
 margin_right = 32.0
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Magic"
 
 [node name="ItemLbl" type="Label" parent="BattleUI/BattleContainer/ActionPanel"]
@@ -127,7 +128,7 @@ margin_left = 4.0
 margin_top = 33.0
 margin_right = 32.0
 margin_bottom = 47.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Item"
 
 [node name="RunLbl" type="Label" parent="BattleUI/BattleContainer/ActionPanel"]
@@ -135,7 +136,7 @@ margin_left = 4.0
 margin_top = 45.0
 margin_right = 32.0
 margin_bottom = 59.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Run"
 
 [node name="Cursor" type="Sprite" parent="BattleUI/BattleContainer/ActionPanel"]
@@ -171,10 +172,10 @@ position = Vector2( 9, 8 )
 script = ExtResource( 10 )
 
 [node name="EnemyInfoPanel" type="Panel" parent="BattleUI/BattleContainer/EnemySelector"]
-margin_left = 144.0
-margin_top = 65.0
-margin_right = 224.0
-margin_bottom = 80.0
+margin_left = 152.0
+margin_top = 40.0
+margin_right = 232.0
+margin_bottom = 55.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -198,6 +199,16 @@ texture = ExtResource( 3 )
 [node name="EnemySelectTimer" type="Timer" parent="BattleUI/BattleContainer/EnemySelector"]
 wait_time = 0.1
 
+[node name="EndTurnTimer" type="Timer" parent="BattleUI/BattleContainer/EnemySelector"]
+wait_time = 2.0
+
+[node name="AttackRollTimer" type="Timer" parent="BattleUI/BattleContainer/EnemySelector"]
+
+[node name="CustomeCamera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+script = ExtResource( 11 )
+
 [node name="BattleManager" type="Node" parent="." groups=[
 "BattleManager",
 ]]
@@ -210,6 +221,3 @@ script = ExtResource( 8 )
 
 [node name="EnemyDataBase" type="Node" parent="BattleManager/EnemyParty"]
 script = ExtResource( 7 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true

@@ -6,6 +6,7 @@ extends CanvasLayer
 onready var hero_view = get_node("HeroView")
 onready var item_view = get_node("ItemView")
 onready var equip_view = get_node("EquipView")
+onready var status_view = get_node("StatusView")
 onready var hero_select_view = get_node("HeroSelectView")
 var paused = false
 var player
@@ -35,4 +36,5 @@ func HideAllViews():
 	item_view.hide()
 	hero_select_view.hide()
 	equip_view.hide()
+	status_view.hide()
 

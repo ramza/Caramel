@@ -1,0 +1,239 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Scenes/Level/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/HUD/GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Level/CameraRig.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/HUD/PlayerMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/HUD/StoryLayer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Level/Portal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/Level/PlayerSpawner.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/Story/NPC.gd" type="Script" id=8]
+[ext_resource path="res://Graphics/Characters/villager_woman.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/HUD/hud-tileset.png" type="Texture" id=10]
+[ext_resource path="res://Other/Tilesets/dungeon_tiles.tres" type="TileSet" id=11]
+[ext_resource path="res://Other/Tilesets/InteriorTiles.tres" type="TileSet" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 20.0
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle_down"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "idle_left"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "idle_right"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "idle_up"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "walk_down"
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 7 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "walk_left"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11, 10 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "walk_right"
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5, 4 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "walk_up"
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1 ]
+}
+
+[node name="HouseA" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ -143.73 ]
+}
+
+[node name="SCENE" type="Node2D" parent="."]
+
+[node name="CameraRig" parent="SCENE" instance=ExtResource( 3 )]
+
+[node name="StoryLayer" parent="SCENE" instance=ExtResource( 5 )]
+
+[node name="PlayerMenu" parent="SCENE" instance=ExtResource( 4 )]
+
+[node name="Player" parent="SCENE" instance=ExtResource( 1 )]
+
+[node name="GUI" parent="SCENE" instance=ExtResource( 2 )]
+
+[node name="PlayerSpawner" type="Node2D" parent="SCENE"]
+script = ExtResource( 7 )
+
+[node name="Main" type="Position2D" parent="SCENE/PlayerSpawner"]
+position = Vector2( 167.68, 185.406 )
+
+[node name="LEVEL" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="LEVEL"]
+tile_set = ExtResource( 11 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 196615, 25, 0, 196616, 25, 0, 196617, 25, 0, 196618, 25, 0, 196619, 25, 0, 196620, 25, 0, 196621, 25, 0, 262151, 25, 0, 262152, 83, 0, 262153, 83, 0, 262154, 83, 0, 262155, 83, 0, 262156, 83, 0, 262157, 25, 0, 327687, 25, 0, 327688, 83, 0, 327689, 83, 0, 327690, 83, 0, 327691, 83, 0, 327692, 83, 0, 327693, 25, 0, 393223, 25, 0, 393224, 42, 0, 393225, 42, 0, 393226, 42, 0, 393227, 42, 0, 393228, 42, 0, 393229, 25, 0, 458759, 25, 0, 458760, 42, 0, 458761, 42, 0, 458762, 42, 0, 458763, 42, 0, 458764, 42, 0, 458765, 25, 0, 524295, 25, 0, 524296, 42, 0, 524297, 41, 0, 524298, 41, 0, 524299, 42, 0, 524300, 42, 0, 524301, 25, 0, 589831, 25, 0, 589832, 42, 0, 589833, 41, 0, 589834, 41, 0, 589835, 42, 0, 589836, 43, 0, 589837, 25, 0, 655367, 25, 0, 655368, 41, 0, 655369, 42, 0, 655370, 42, 0, 655371, 42, 0, 655372, 42, 0, 655373, 25, 0, 720903, 25, 0, 720904, 25, 0, 720905, 25, 0, 720906, 42, 0, 720907, 25, 0, 720908, 25, 0, 720909, 25, 0, 786439, 29, 0, 786440, 29, 0, 786441, 29, 0, 786442, 42, 0, 786443, 29, 0, 786444, 29, 0, 786445, 29, 0 )
+
+[node name="details" type="TileMap" parent="LEVEL"]
+tile_set = ExtResource( 12 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 262153, 536870922, 0, 262155, 5, 0, 393224, 1, 0, 393225, 536870925, 0, 393228, 7, 0, 458764, 8, 0, 589832, 536870927, 0, 655368, 6, 0 )
+
+[node name="VillagerWoman" type="KinematicBody2D" parent="LEVEL"]
+position = Vector2( 168.09, 123.822 )
+script = ExtResource( 8 )
+dialogues = [ "VILLAGER: My husband fought in the war for the old king. He went to Castle Gaz and never came back. I'd give anything to see him again.", "I pray to the gods that they return him. In my heart I still believe he's alive somehwere, even though everyone says it can't be true. I guess they must be right, but still, I believe." ]
+
+[node name="Sprite" type="Sprite" parent="LEVEL/VillagerWoman"]
+texture = ExtResource( 9 )
+vframes = 4
+hframes = 3
+frame = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LEVEL/VillagerWoman"]
+shape = SubResource( 1 )
+
+[node name="ActivationArea" type="Area2D" parent="LEVEL/VillagerWoman"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LEVEL/VillagerWoman/ActivationArea"]
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LEVEL/VillagerWoman"]
+autoplay = "idle_down"
+anims/idle_down = SubResource( 3 )
+anims/idle_left = SubResource( 4 )
+anims/idle_right = SubResource( 5 )
+anims/idle_up = SubResource( 6 )
+anims/walk_down = SubResource( 7 )
+anims/walk_left = SubResource( 8 )
+anims/walk_right = SubResource( 9 )
+anims/walk_up = SubResource( 10 )
+
+[node name="RayCast2D" type="RayCast2D" parent="LEVEL/VillagerWoman"]
+enabled = true
+cast_to = Vector2( 0, 10 )
+
+[node name="Portal" parent="LEVEL" instance=ExtResource( 6 )]
+position = Vector2( 168.361, 217.975 )
+spawn_point = "HouseA"
+destination = "CecilTown/CecilTown"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="LEVEL"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="LEVEL/CanvasLayer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="LEVEL/CanvasLayer/ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="LEVEL/CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 336, 202 )
+scale = Vector2( 19, 14 )
+texture = ExtResource( 10 )

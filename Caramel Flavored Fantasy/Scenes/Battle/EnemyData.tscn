@@ -2,7 +2,5 @@
 
 [ext_resource path="res://Scripts/Battle/EnemyData.gd" type="Script" id=1]
 
-
-
 [node name="EnemyData" type="Node"]
 script = ExtResource( 1 )
