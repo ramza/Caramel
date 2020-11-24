@@ -171,7 +171,7 @@ __meta__ = {
 script = ExtResource( 7 )
 
 [node name="Main" type="Position2D" parent="SCENE/PlayerSpawner"]
-position = Vector2( 167.68, 185.406 )
+position = Vector2( 167.68, 199.406 )
 
 [node name="LEVEL" type="Node2D" parent="."]
 

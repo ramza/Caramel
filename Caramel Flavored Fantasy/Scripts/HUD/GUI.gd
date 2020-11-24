@@ -22,7 +22,7 @@ func _ready():
 	pass 
 	
 
-func FlashScreen():
+func FlashScreen(effect_type):
 	pass
 
 
@@ -30,12 +30,12 @@ func Transition(type=TransitionType.FADEOUT):
 	match(type):
 		TransitionType.FADEOUT:
 			curtain.FadeOut()
+		TransitionType.FADEIN:
+			curtain.FadeIn()
 		TransitionType.DROP:
 			curtain.Drop()
 		TransitionType.RISE:
 			curtain.Rise()
-
-
 
 func _on_FlashTimer_timeout():
 	pass # Replace with function body.

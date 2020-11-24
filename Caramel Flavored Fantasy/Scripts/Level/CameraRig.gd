@@ -1,7 +1,8 @@
 extends KinematicBody2D
 
-const SCREEN_WIDTH = 384
-const SCREEN_HEIGHT = 216
+var SCREEN_WIDTH = 384
+var SCREEN_HEIGHT = 216
+export var zoom = 1
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -14,6 +15,7 @@ export var max_y = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+
 	player = get_tree().get_nodes_in_group("Player")[0]
 	position = player.position
 	pass # Replace with function body.

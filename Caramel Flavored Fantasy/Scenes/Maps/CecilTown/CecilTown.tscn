@@ -213,6 +213,7 @@ __meta__ = {
 position = Vector2( 192, 108 )
 script = ExtResource( 5 )
 max_x = 650
+min_y = -16
 max_y = 500
 
 [node name="Camera2D" type="Camera2D" parent="SCENE/CameraRig"]
@@ -222,7 +223,7 @@ current = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
-smoothing_speed = 6.0
+smoothing_speed = 7.0
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SCENE/CameraRig"]

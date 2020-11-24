@@ -1,0 +1,34 @@
+Zedrul walk up
+Zedrul walk up
+Zedrul wait
+Vaush look down
+Vaush say Prince Zedrul. What do you want?
+Zedrul walk up
+Zedrul say I've finished reading the bones.
+Vaush look right
+Vaush say Yes, of course. And what did your visions show you?
+Zedrul walk up
+Zedrul look left
+Zedrul say That you will soon rule the world.
+Zedrul say The castles of Starfall will be yours, and their lords will bow to you. Their people will call you master.
+Vaush look down
+Vaush say Yes. Good. This is what I want. Are you sure? Your magic is not wrong?
+Zedrul look down
+Zedrul say My magic is never wrong. But the prophecy does not come without a cost. There is always a price for the power I grant.
+Vaush walk down
+Vaush look right
+Vaush say Yes. There is always a price with you, wizard. Just like before, with the girl.
+Zedrul look left
+Zedrul say I require a boy this time. From the village near Gaz. His blood will awaken the dragon.
+Vaush say Then we will find him. Take my dark riders. You must go with them, to identify that he is the one.
+Zedrul say Your majesty. I will bring him to you.
+Zedrul walk down
+Zedrul walk down
+Zedrul walk down
+Zedrul walk down
+Vaush walk up
+Vaush look right
+Vaush say I will have the power of the gods. For a thousand years they will tremble at the mention of my name. 
+Vaush look down
+Vuash say But I need an heir if I'm to build a dynasty.
+Director fadeout
