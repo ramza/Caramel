@@ -101,6 +101,7 @@ tracks/0/keys = {
 script = ExtResource( 3 )
 
 [node name="Curtain" type="Sprite" parent="."]
+visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 190, 110 )
 scale = Vector2( 8.77083, 5.51042 )
@@ -116,6 +117,7 @@ anims/rise = SubResource( 5 )
 anims/up = SubResource( 6 )
 
 [node name="WhiteScreen" type="Sprite" parent="."]
+visible = false
 position = Vector2( 189.841, 111.272 )
 scale = Vector2( 13.115, 7.39199 )
 texture = ExtResource( 4 )

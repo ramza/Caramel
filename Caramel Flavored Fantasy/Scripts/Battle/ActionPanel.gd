@@ -13,6 +13,8 @@ onready var runLbl = get_node("RunLbl")
 onready var nameLbl = get_node("HeroNameLbl")
 onready var cursor=get_node("Cursor")
 
+var item_panel
+
 var battle_manager
 
 var action_items = []
@@ -29,6 +31,8 @@ var hero_name
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	item_panel = get_parent().get_node("ItemPanel")
+	
 	battle_manager = get_tree().get_nodes_in_group("BattleManager")[0]
 	
 	action_items.append(fightLbl)
@@ -36,7 +40,6 @@ func _ready():
 	action_items.append(itemLbl)
 	action_items.append(runLbl)
 				
-	pass # Replace with function body.
 
 func Activate(hero_name):
 	
@@ -76,11 +79,20 @@ func _process(delta):
 					action_type=ActionType.FIGHT
 					Fight()
 				1:
-					action_type=ActionType.FIGHT
+					action_type=ActionType.MAGIC
 					Magic()
+				2:
+					action_type = ActionType.ITEM
+					Item()
 				
 func Magic():
+	
 	pass
+	
+func Item():
+	item_panel.Activate()
+	Deactivate()
+	
 	
 func Fight():
 	enemy_select.Activate(FindHeroID(hero_name),action_type)

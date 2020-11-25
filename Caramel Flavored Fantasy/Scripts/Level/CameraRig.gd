@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-var SCREEN_WIDTH = 384
-var SCREEN_HEIGHT = 216
+var SCREEN_WIDTH = 352
+var SCREEN_HEIGHT = 198
 export var zoom = 1
 # Declare member variables here. Examples:
 # var a = 2
